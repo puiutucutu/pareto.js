@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "description": "A light-weight underscore/lodash that follows the 80/20 principle",
   "main": "src/pareto.js",
   "scripts": {
