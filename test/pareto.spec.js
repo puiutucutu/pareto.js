@@ -39,6 +39,20 @@ describe('Pareto', () => {
         })
     })
 
+    describe('remove', () => {
+        it('removes an element without changing the array', () => {
+            const array = [1,2,3]
+            const newArray = _.remove(array, 2)
+            expect(newArray).toEqual([1,3])
+            expect(array).toEqual([1,2,3])
+
+            const arrayOfObjects = [{n:1,z:1},{n:2,z:2},{n:3,z:3}]
+            const newArrayOfObjects = _.remove(arrayOfObjects, {n:2})
+            expect(newArrayOfObjects).toEqual([{n:1,z:1},{n:3,z:3}])
+            expect(arrayOfObjects).toEqual([{n:1,z:1},{n:2,z:2},{n:3,z:3}])
+        })
+    })
+
     describe('curry', () => {
         it('returns the curried function', () => {
             const add = (a, b) => a + b
