@@ -20,8 +20,6 @@ const curry = (fn, ...args) => {
 	return curry.bind(this, fn, ...args)
 }
 
-//const compose = f => g => (...x) => f(g.apply(this, x))
-//const compose = (f, g) => (x) => f(g(x))
 const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
 
 const Pareto = {
