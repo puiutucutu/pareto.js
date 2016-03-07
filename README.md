@@ -1,10 +1,12 @@
 # pareto.js
 
+A lightweight truly functional utility library that follows the 80/20 principle.
+
+### Why
+
 We all love *underscore* and *lodash*, but most of the times they add too much code that we don't use.
 
-Pareto is a light-weight utility library that follows the 80/20 principle.
-
-It only have what you really need.
+It only has what you really need.
 
 [![build status](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg?style=flat-square)](https://travis-ci.org/concretesolutions/pareto.js)
 [![npm version](https://img.shields.io/npm/v/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
