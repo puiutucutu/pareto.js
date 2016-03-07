@@ -6,6 +6,8 @@ We all love *underscore* and *lodash*, but most of the times they add too much c
 
 Pareto does only what you really use.
 
+[![build status](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg?style=flat-square)](https://travis-ci.org/concretesolutions/pareto.js)
+
 ### Installation
 
 To install the stable version:

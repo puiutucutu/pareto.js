@@ -16,7 +16,13 @@
     "stdlib",
     "modules"
   ],
-  "author": "Concrete Solutions",
+  "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/concretesolutions/pareto.js"
+  },
+  "authors": [
+    "Matheus Lima <matheusml90@gmail.com> (https://matheuslima.com)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-loader": "~6.2.4",
