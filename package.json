@@ -2,7 +2,7 @@
   "name": "paretojs",
   "version": "0.1.2",
   "description": "A light-weight underscore/lodash that follows the 80/20 principle",
-  "main": "pareto.js",
+  "main": "src/pareto.js",
   "scripts": {
     "start": "webpack --watch -p",
     "test": "cross-env BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive",

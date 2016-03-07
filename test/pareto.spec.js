@@ -1,5 +1,5 @@
 import expect from 'expect'
-import _ from '../pareto'
+import _ from '../src/pareto'
 
 describe('Pareto', () => {
     describe('head', () => {

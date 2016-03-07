@@ -1,13 +1,13 @@
-import isEmpty from './array/utils'
+import ArrayUtils from './array/utils'
 
-const head = array => isEmpty(array) ? [] : array[0]
+const head = array => ArrayUtils.isEmpty(array) ? [] : array[0]
 
-const tail = array => isEmpty(array) ? [] : array.slice(1, array.length)
+const tail = array => ArrayUtils.isEmpty(array) ? [] : array.slice(1, array.length)
 
-const last = array => isEmpty(array) ? [] : array[array.length - 1]
+const last = array => ArrayUtils.isEmpty(array) ? [] : array[array.length - 1]
 
 const flatten = array => {
-    if (isEmpty(array)) {
+    if (ArrayUtils.isEmpty(array)) {
         return []
     }
     return array.reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), [])

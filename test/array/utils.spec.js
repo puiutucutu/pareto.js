@@ -1,10 +1,10 @@
 import expect from 'expect'
-import isEmpty from '../../array/utils'
+import ArrayUtils from '../../src/array/utils'
 
 describe('isEmpty', () => {
     it('returns the correct boolean value given the array', () => {
-        expect(isEmpty(null)).toBe(true);
-        expect(isEmpty([])).toBe(true);
-        expect(isEmpty(['one'])).toBe(false);
+        expect(ArrayUtils.isEmpty(null)).toBe(true);
+        expect(ArrayUtils.isEmpty([])).toBe(true);
+        expect(ArrayUtils.isEmpty(['one'])).toBe(false);
     })
 })

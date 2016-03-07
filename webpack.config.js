@@ -1,6 +1,6 @@
 module.exports = {
   entry: [
-    './pareto.js'
+    './src/pareto.js'
   ],
   output: {
     path: __dirname + '/dist',
