@@ -4,7 +4,7 @@
   "description": "A light-weight underscore/lodash that follows the 80/20 principle",
   "main": "src/pareto.js",
   "scripts": {
-    "start": "webpack --watch -p",
+    "start": "webpack --watch",
     "test": "cross-env BABEL_ENV=commonjs mocha --compilers js:babel-register --recursive",
     "test:watch": "npm test -- --watch"
   },

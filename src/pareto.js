@@ -1,4 +1,5 @@
-import ArrayUtils from './array/utils'
+import ArrayUtils from './utils/array'
+import ObjectUtils from './utils/object'
 
 const head = array => ArrayUtils.isEmpty(array) ? [] : array[0]
 
@@ -39,6 +40,9 @@ const Pareto = {
     remove: remove,
     curry: curry,
     compose: compose,
+    isEqual: ObjectUtils.isEqual,
+    find: ArrayUtils.findIndexByElement,
+    splice: ArrayUtils.splice
 }
 
 export default Pareto
