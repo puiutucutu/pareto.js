@@ -56,7 +56,6 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.default = Pareto;
 
 	var _utils = __webpack_require__(2);
 
@@ -64,32 +63,62 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function Pareto() {
-	    var head = function head(array) {
-	        return _utils2.default.isEmpty(array) ? [] : array[0];
-	    };
+	var head = function head(array) {
+	    return (0, _utils2.default)(array) ? [] : array[0];
+	};
 
-	    var tail = function tail(array) {
-	        return _utils2.default.isEmpty(array) ? [] : array.slice(1, array.length);
-	    };
+	var tail = function tail(array) {
+	    return (0, _utils2.default)(array) ? [] : array.slice(1, array.length);
+	};
 
-	    var last = function last(array) {
-	        return _utils2.default.isEmpty(array) ? [] : array[array.length - 1];
-	    };
+	var last = function last(array) {
+	    return (0, _utils2.default)(array) ? [] : array[array.length - 1];
+	};
 
-	    var flatten = function flatten(array) {
-	        return array.reduce(function (a, b) {
-	            return a.concat(Array.isArray(b) ? flatten(b) : b);
-	        }, []);
-	    };
+	var flatten = function flatten(array) {
+	    if ((0, _utils2.default)(array)) {
+	        return [];
+	    }
+	    return array.reduce(function (a, b) {
+	        return a.concat(Array.isArray(b) ? flatten(b) : b);
+	    }, []);
+	};
 
-	    return {
-	        head: head,
-	        tail: tail,
-	        last: last,
-	        flatten: flatten
-	    };
-	}
+	var curry = function curry(fn) {
+	    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+	        args[_key - 1] = arguments[_key];
+	    }
+
+	    if (args.length === fn.length) {
+	        return fn.apply(undefined, args);
+	    }
+	    return curry.bind.apply(curry, [undefined, fn].concat(args));
+	};
+
+	//const compose = f => g => (...x) => f(g.apply(this, x))
+	//const compose = (f, g) => (x) => f(g(x))
+	var compose = function compose() {
+	    for (var _len2 = arguments.length, fns = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+	        fns[_key2] = arguments[_key2];
+	    }
+
+	    return fns.reduce(function (f, g) {
+	        return function () {
+	            return f(g.apply(undefined, arguments));
+	        };
+	    });
+	};
+
+	var Pareto = {
+	    head: head,
+	    tail: tail,
+	    last: last,
+	    flatten: flatten,
+	    curry: curry,
+	    compose: compose
+	};
+
+	exports.default = Pareto;
 
 /***/ },
 /* 2 */
@@ -100,15 +129,9 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	exports.default = ArrayUtils;
-	function ArrayUtils() {
-	    var isEmpty = function isEmpty(array) {
-	        return array && array.length > 0;
-	    };
-
-	    return {
-	        isEmpty: isEmpty
-	    };
+	exports.default = isEmpty;
+	function isEmpty(array) {
+	    return !(array && array.length > 0);
 	}
 
 /***/ }

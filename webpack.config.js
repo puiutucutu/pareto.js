@@ -4,7 +4,7 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/dist',
-    filename: "pareto.min.js"
+    filename: "pareto.js"
   },
   module: {
     loaders: [

@@ -1,9 +1,3 @@
-function ArrayUtils() {
-    const isEmpty = array => !(array && array.length > 0)
-
-    return {
-        isEmpty: isEmpty
-    }
+export default function isEmpty(array) {
+    return !(array && array.length > 0)
 }
-
-export default ArrayUtils;
