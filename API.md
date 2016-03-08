@@ -2,7 +2,7 @@
 
 ###### Array
 
-**_.head(array)**
+**head** : ```js _.head(array)```
 
 Gets the first element of an array
 
