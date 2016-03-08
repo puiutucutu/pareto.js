@@ -54,6 +54,22 @@ describe('ArrayUtils', () => {
         })
     })
 
+    describe('tail', () => {
+        it('returns the list without its head', () => {
+            expect(ArrayUtils.tail([])).toEqual([])
+            expect(ArrayUtils.tail(null)).toEqual([])
+            expect(ArrayUtils.tail([1,2,3])).toEqual([2, 3])
+        })
+    })
+
+    describe('last', () => {
+        it('returns the last element of an array', () => {
+            expect(ArrayUtils.last([])).toEqual(undefined)
+            expect(ArrayUtils.last(null)).toEqual(undefined)
+            expect(ArrayUtils.last([1,2,3])).toEqual(3)
+        })
+    })
+
     describe('where', () => {
         it('returns the index of the element in an array', () => {
             const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]

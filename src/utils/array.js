@@ -31,7 +31,7 @@ const head = array => isEmpty(array) ? undefined : array[0]
 
 const tail = array => isEmpty(array) ? [] : array.slice(1, array.length)
 
-const last = array => isEmpty(array) ? [] : array[array.length - 1]
+const last = array => isEmpty(array) ? undefined : array[array.length - 1]
 
 const flatten = array => {
     if (isEmpty(array)) {

@@ -1,6 +1,6 @@
 ### API Reference
 
-##### Array
+###### Array
 
 **_.head(array)**
 
@@ -11,6 +11,24 @@ _.head([1, 2, 3]) // 1
 _.head([]) // undefined
 ```
 
-##### Object
+**_.tail(array)**
 
-##### Functional
+Gets all but the first element of an array.
+
+```js
+_.tail([1, 2, 3]) // [2, 3]
+_.tail([]) // []
+```
+
+**_.last(array)**
+
+Gets the last element of an array.
+
+```js
+_.last([1, 2, 3]) // 3
+_.last([]) // undefined
+```
+
+###### Object
+
+###### Functional
