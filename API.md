@@ -2,7 +2,7 @@
 
 ###### Array
 
-**head** : ```js _.head(array)```
+**head** : ```_.head(array)```
 
 Gets the first element of an array
 
@@ -11,7 +11,7 @@ _.head([1, 2, 3]) // 1
 _.head([]) // undefined
 ```
 
-**_.tail(array)**
+**tail** : ```_.tail(array)```
 
 Gets all but the first element of an array.
 
@@ -20,7 +20,7 @@ _.tail([1, 2, 3]) // [2, 3]
 _.tail([]) // []
 ```
 
-**_.last(array)**
+**last** : ```_.last(array)```
 
 Gets the last element of an array.
 
