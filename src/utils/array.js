@@ -27,7 +27,7 @@ const splice = (array, index) => {
     return newArray
 }
 
-const head = array => isEmpty(array) ? [] : array[0]
+const head = array => isEmpty(array) ? undefined : array[0]
 
 const tail = array => isEmpty(array) ? [] : array.slice(1, array.length)
 

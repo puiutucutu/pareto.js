@@ -46,6 +46,14 @@ describe('ArrayUtils', () => {
         })
     })
 
+    describe('head', () => {
+        it('returns the first element of an array', () => {
+            expect(ArrayUtils.head([])).toEqual(undefined)
+            expect(ArrayUtils.head(null)).toEqual(undefined)
+            expect(ArrayUtils.head([1,2,3])).toEqual(1)
+        })
+    })
+
     describe('where', () => {
         it('returns the index of the element in an array', () => {
             const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]
