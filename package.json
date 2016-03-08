@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "A lightweight truly functional utility library that follows the 80/20 principle.",
   "main": "src/pareto.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "start": "webpack",
     "prepublish": "npm run build",
     "test": "npm run coverage",
-    "test-unit": "mocha --compilers js:babel-core/register test/unit/**/*.spec.js",
-    "test-unit-watch": "mocha --watch --compilers js:babel-core/register test/unit/**/*.spec.js",
+    "test-unit": "mocha --compilers js:babel-core/register test/**/*.spec.js",
+    "test-unit-watch": "mocha --watch --compilers js:babel-core/register test/**/*.spec.js",
     "lint": "eslint src test"
   },
   "keywords": [

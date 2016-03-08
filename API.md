@@ -70,7 +70,7 @@ _.where([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // 0
 
 ###### Object
 
-**isEqual** : ```_.isEqual(object1, object2)```
+**equals** : ```_.equals(object1, object2)```
 
 Gets the comparison between objects
 
@@ -79,8 +79,20 @@ const object1 = { a:1, b:2 }
 const object2 = { a:1, b:2 }
 const object3 = { a:1}
 
-_.isEqual(object1, object2) // true
-_.isEqual(object1, object3) // false
+_.equals(object1, object2) // true
+_.equals(object1, object3) // false
+```
+
+**matches** : ```_.matches(object, props)```
+
+Get the comparison between an object and some of it's properties
+
+```js
+const object1 = { a: 1, b: 2 }
+
+_.matches(object1, { a: 1 }) // true
+_.matches(object1, { a: 1, b: 2 }) // true
+_.matches(object1, { a: 3 }) // false
 ```
 
 ###### Functional

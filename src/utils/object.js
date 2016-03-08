@@ -1,4 +1,4 @@
-const isEqual = (a, b) => {
+const equals = (a, b) => {
     const aProps = Object.getOwnPropertyNames(a)
     const bProps = Object.getOwnPropertyNames(b)
 
@@ -17,8 +17,15 @@ const isEqual = (a, b) => {
     return true
 }
 
+const matches = (obj, props) => {
+    return Object.keys(props).every((key) => {
+        return obj[key] === props[key]
+    })
+}
+
 const ObjectUtils = {
-    isEqual: isEqual
+    equals: equals,
+    matches: matches
 }
 
 export default ObjectUtils

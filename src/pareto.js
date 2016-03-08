@@ -12,7 +12,8 @@ const Pareto = {
     where: ArrayUtils.where,
     curry: FunctionalUtils.curry,
     compose: FunctionalUtils.compose,
-    isEqual: ObjectUtils.isEqual,
+    equals: ObjectUtils.equals,
+    matches: ObjectUtils.matches
 }
 
 export default Pareto

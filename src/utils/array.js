@@ -3,18 +3,14 @@ import ObjectUtils from './object'
 const isEmpty = array => !(array && array.length > 0)
 
 const findByMatchingProperties = (array, properties) => {
-    return array.filter((entry) => {
-        return Object.keys(properties).every((key) => {
-            return entry[key] === properties[key]
-        })
-    })
+    return array.filter((entry) => ObjectUtils.matches(entry, properties))
 }
 
 const findIndexByObject = (array, element) => {
     if (isEmpty(array) || !element) return -1
 
     for (let i = 0; i < array.length; i++) {
-        if (ObjectUtils.isEqual(array[i], element)) return i
+        if (ObjectUtils.equals(array[i], element)) return i
     }
     return -1
 }
