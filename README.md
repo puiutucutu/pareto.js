@@ -3,6 +3,7 @@
 ###### A lightweight truly functional utility library that follows the 80/20 principle.
 
 [![build status](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg?style=flat-square)](https://travis-ci.org/concretesolutions/pareto.js)
+[![code climate coverage](https://codeclimate.com/github/concretesolutions/pareto.js/badges)](https://codeclimate.com/github/concretesolutions/pareto.js)
 [![npm version](https://img.shields.io/npm/v/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 [![npm downloads](https://img.shields.io/npm/dm/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 
