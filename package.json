@@ -1,10 +1,12 @@
 {
   "name": "paretojs",
-  "version": "0.3.7",
+  "version": "0.4.0",
   "description": "A lightweight truly functional utility library that follows the 80/20 principle.",
   "main": "src/pareto.js",
   "scripts": {
     "start": "webpack --watch",
+    "build": "webpack -p",
+    "prepublish": "npm run build",
     "test": "npm run coverage",
     "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- --timeout 30000 test/**/*.spec.js"
   },
