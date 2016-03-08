@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "A lightweight truly functional utility library that follows the 80/20 principle.",
   "main": "src/pareto.js",
   "scripts": {

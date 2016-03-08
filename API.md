@@ -70,4 +70,43 @@ _.where([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // 0
 
 ###### Object
 
+**isEqual** : ```_.isEqual(object1, object2)```
+
+Gets the comparison between objects
+
+```js
+const object1 = { a:1, b:2 }
+const object2 = { a:1, b:2 }
+const object3 = { a:1}
+
+_.isEqual(object1, object2) // true
+_.isEqual(object1, object3) // false
+```
+
 ###### Functional
+
+**curry** : ```_.curry(args)```
+
+Gets a curried function
+
+```js
+const add = (x, y) => x + y
+
+_.curry(add, 1, 2) // 3
+_.curry(add)(1)(2) // 3
+_.curry(add)(1, 2) // 3
+_.curry(add, 1)(2) // 3
+```
+
+**compose** : ```_.compose(functions)```
+
+Gets a composed function
+
+```js
+const toUpperCase = x => x.toUpperCase()
+const exclaim = x => x + '!!!'
+
+const angry = _.compose(toUpperCase, exclaim)
+
+angry('stop') // 'STOP!!!
+```
