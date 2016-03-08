@@ -29,6 +29,45 @@ _.last([1, 2, 3]) // 3
 _.last([]) // undefined
 ```
 
+**flatten** : ```_.flatten(array)```
+
+Flattens (recursively) an array
+
+```js
+_.flatten([1, [2, 3], 4]) // [1, 2, 3, 4]
+_.flatten([]) // []
+```
+
+**remove** : ```_.remove(array, element)```
+
+Removes the first occurence of the element from array without modifying it
+
+```js
+_.remove([1, 2, 3], 2) // [1, 3]
+_.remove([1, 2, 2, 2, 3], 2) // [1, 2, 2 3]
+_.remove([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // [{ name: 'name2' }]
+```
+
+**removeAll** : ```_.removeAll(array, element)```
+
+Removes all occurences of the element from array without modifying it
+
+```js
+_.removeAll([1, 2, 3], 2) // [1, 3]
+_.removeAll([1, 2, 2, 2, 3], 2) // [1, 2, 2 3]
+_.removeAll([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // [{ name: 'name2' }]
+```
+
+**where** : ```_.where(array, element)```
+
+Gets the index of the element
+
+```js
+_.where([1, 2, 3], 2) // 1
+_.where([1, 2, 3], 4) // -1
+_.where([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // 0
+```
+
 ###### Object
 
 ###### Functional

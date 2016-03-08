@@ -61,6 +61,17 @@ const remove = (array, props) => {
     return (index > -1) ? splice(array, index) : array
 }
 
+const removeAll = (array, props) => {
+    if (isEmpty(array)) return []
+    if (!props) return array
+
+
+    return array.reduce((acc, current) => {
+        array = remove(array, props)
+        return array
+    }, array)
+}
+
 const ArrayUtils = {
     isEmpty: isEmpty,
     findByMatchingProperties: findByMatchingProperties,
@@ -72,6 +83,7 @@ const ArrayUtils = {
     flatten: flatten,
     where: where,
     remove: remove,
+    removeAll: removeAll
 }
 
 export default ArrayUtils

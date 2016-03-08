@@ -70,6 +70,33 @@ describe('ArrayUtils', () => {
         })
     })
 
+    describe('flatten', () => {
+        it('returns the flatten array', () => {
+            expect(ArrayUtils.flatten([])).toEqual([])
+            expect(ArrayUtils.flatten(null)).toEqual([])
+            expect(ArrayUtils.flatten([1,2,3])).toEqual([1,2,3])
+            expect(ArrayUtils.flatten([1, [2, 3], 4])).toEqual([1,2,3,4])
+        })
+    })
+
+    describe('remove', () => {
+        it('removes the first occurence of the element', () => {
+            expect(ArrayUtils.remove([], 1)).toEqual([])
+            expect(ArrayUtils.remove([1,2,3], 2)).toEqual([1, 3])
+            expect(ArrayUtils.remove([{n:1},{n:2},{n:3}], {n:2})).toEqual([{n:1}, {n:3}])
+            expect(ArrayUtils.remove([1,2,2,3], 2)).toEqual([1, 2, 3])
+        })
+    })
+
+    describe('removeAll', () => {
+        it('removes all occurences of the element', () => {
+            expect(ArrayUtils.removeAll([], 1)).toEqual([])
+            expect(ArrayUtils.removeAll([1,2,3], 2)).toEqual([1, 3])
+            expect(ArrayUtils.removeAll([{n:1},{n:2},{n:3}], {n:2})).toEqual([{n:1}, {n:3}])
+            expect(ArrayUtils.removeAll([1,2,2,2,2,2,3], 2)).toEqual([1, 3])
+        })
+    })
+
     describe('where', () => {
         it('returns the index of the element in an array', () => {
             const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]
