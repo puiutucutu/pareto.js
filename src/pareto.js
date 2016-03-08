@@ -11,6 +11,7 @@ const Pareto = {
     removeAll: ArrayUtils.removeAll,
     indexOf: ArrayUtils.indexOf,
     where: ArrayUtils.where,
+    take: ArrayUtils.take,
     curry: FunctionalUtils.curry,
     compose: FunctionalUtils.compose,
     equals: ObjectUtils.equals,

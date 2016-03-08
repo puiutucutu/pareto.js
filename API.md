@@ -29,6 +29,16 @@ _.last([1, 2, 3]) // 3
 _.last([]) // undefined
 ```
 
+**take** : ```_.take(array, quantity)```
+
+Gets the first *x* elements from an array.
+
+```js
+_.take([]) // []
+_.take([1,2,3]) // ([1,2,3])
+_.take([1,2,3], 2) // [1,2])
+```
+
 **flatten** : ```_.flatten(array)```
 
 Flattens (recursively) an array
