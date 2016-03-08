@@ -98,7 +98,7 @@ _.curry(add)(1, 2) // 3
 _.curry(add, 1)(2) // 3
 ```
 
-**compose** : ```_.compose(functions)```
+**compose** : ```_.compose(f1, f2, ..., fn)```
 
 Gets a composed function
 
