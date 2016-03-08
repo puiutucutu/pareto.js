@@ -14,8 +14,8 @@ Pareto only has what you really need.
 
 1. It's lightweight
 2. Only pure functions
-3. Made with the newest stuff: ES6, Babel, Webpack
-4. Encourages immutability
+3. Encourages immutability
+4. Made with the newest stuff: ES6, Babel, Webpack
 
 ### Installation
 
@@ -32,10 +32,10 @@ This assumes that you’re using [npm](https://www.npmjs.com/) with a module bun
 Import pareto.js:
 
 ```js
-import _ from 'pareto'
+import _ from 'paretojs'
 ```
 
-And use it like you would with *underscore* or *lodash*:
+And use it:
 
 ```js
 const myArray = [1, 2, 3]
@@ -44,6 +44,32 @@ const newArray = _.remove(myArray, 2)
 console.log(myArray) // [1, 2, 3]
 console.log(newArray) // [1, 2]
 
+```
+
+### Contributing
+
+Fork, then clone the repository:
+
+```
+git clone https://github.com/<your-username>/pareto.js.git
+```
+
+If you don't have webpack and mocha yet, run:
+
+```
+npm install -g webpack mocha
+```
+
+Run the tests:
+
+```
+npm test
+```
+
+Run the project:
+
+```
+npm start
 ```
 
 ### License
