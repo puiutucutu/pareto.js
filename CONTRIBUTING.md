@@ -15,7 +15,7 @@ npm install -g webpack mocha
 Run the tests:
 
 ```
-npm run test
+npm run test-unit
 ```
 
 Run the project:
