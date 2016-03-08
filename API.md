@@ -58,14 +58,26 @@ _.removeAll([1, 2, 2, 2, 3], 2) // [1, 2, 2 3]
 _.removeAll([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // [{ name: 'name2' }]
 ```
 
+**indexOf** : ```_.indexOf(array, element)```
+
+Gets the index of the element
+
+```js
+_.indexOf([1, 2, 3], 2) // 1
+_.indexOf([1, 2, 3], 4) // -1
+_.indexOf([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // 0
+```
+
 **where** : ```_.where(array, element)```
 
 Gets the index of the element
 
 ```js
-_.where([1, 2, 3], 2) // 1
-_.where([1, 2, 3], 4) // -1
-_.where([{ name: 'name1' }, { name: 'name2' }], { name:'name1' }) // 0
+const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]
+
+_.where(array, { id: 3 })) // []
+_.where(array, { id: 1 })) // [{ id: 1, name: 'name1' }]
+_.where(array, { id: 1, name: 'name1' }) // [{ id: 1, name: 'name1' }]
 ```
 
 ###### Object

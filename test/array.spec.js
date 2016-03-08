@@ -22,13 +22,13 @@ describe('ArrayUtils', () => {
         })
     })
 
-    describe('findByMatchingProperties', () => {
+    describe('where', () => {
         it('returns the objects that matched the properties', () => {
             const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]
 
-            expect(ArrayUtils.findByMatchingProperties(array, { id: 3 })).toEqual([])
-            expect(ArrayUtils.findByMatchingProperties(array, { id: 1 })).toEqual([{ id: 1, name: 'name1' }])
-            expect(ArrayUtils.findByMatchingProperties(array, { id: 1, name: 'name1' })).toEqual([{ id: 1, name: 'name1' }])
+            expect(ArrayUtils.where(array, { id: 3 })).toEqual([])
+            expect(ArrayUtils.where(array, { id: 1 })).toEqual([{ id: 1, name: 'name1' }])
+            expect(ArrayUtils.where(array, { id: 1, name: 'name1' })).toEqual([{ id: 1, name: 'name1' }])
         })
     })
 
@@ -97,17 +97,17 @@ describe('ArrayUtils', () => {
         })
     })
 
-    describe('where', () => {
+    describe('indexOf', () => {
         it('returns the index of the element in an array', () => {
             const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]
 
-            expect(ArrayUtils.where(null, { id: 3 })).toBe(-1)
-            expect(ArrayUtils.where(null, { id: 3 })).toBe(-1)
-            expect(ArrayUtils.where([], { id: 3 })).toBe(-1)
-            expect(ArrayUtils.where(array)).toBe(-1)
-            expect(ArrayUtils.where(array, { id: 3 })).toBe(-1)
-            expect(ArrayUtils.where(array, { id: 1 })).toBe(0)
-            expect(ArrayUtils.where(array, { id: 1, name: 'name1' })).toBe(0)
+            expect(ArrayUtils.indexOf(null, { id: 3 })).toBe(-1)
+            expect(ArrayUtils.indexOf(null, { id: 3 })).toBe(-1)
+            expect(ArrayUtils.indexOf([], { id: 3 })).toBe(-1)
+            expect(ArrayUtils.indexOf(array)).toBe(-1)
+            expect(ArrayUtils.indexOf(array, { id: 3 })).toBe(-1)
+            expect(ArrayUtils.indexOf(array, { id: 1 })).toBe(0)
+            expect(ArrayUtils.indexOf(array, { id: 1, name: 'name1' })).toBe(0)
         })
     })
 })

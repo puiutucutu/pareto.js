@@ -2,7 +2,7 @@ import ObjectUtils from './object'
 
 const isEmpty = array => !(array && array.length > 0)
 
-const findByMatchingProperties = (array, properties) => {
+const where = (array, properties) => {
     return array.filter((entry) => ObjectUtils.matches(entry, properties))
 }
 
@@ -36,11 +36,11 @@ const flatten = array => {
     return array.reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), [])
 }
 
-const where = (array, props) => {
+const indexOf = (array, props) => {
     if (isEmpty(array) || !props) return -1
 
     if (typeof(props) === 'object') {
-        const element = findByMatchingProperties(array, props)
+        const element = where(array, props)
         return findIndexByObject(array, element[0])
     }
     else {
@@ -52,7 +52,7 @@ const remove = (array, props) => {
     if (isEmpty(array)) return []
     if (!props) return array
 
-    const index = where(array, props)
+    const index = indexOf(array, props)
 
     return (index > -1) ? splice(array, index) : array
 }
@@ -70,14 +70,14 @@ const removeAll = (array, props) => {
 
 const ArrayUtils = {
     isEmpty: isEmpty,
-    findByMatchingProperties: findByMatchingProperties,
+    where: where,
     findIndexByObject: findIndexByObject,
     splice: splice,
     head: head,
     tail: tail,
     last: last,
     flatten: flatten,
-    where: where,
+    indexOf: indexOf,
     remove: remove,
     removeAll: removeAll
 }
