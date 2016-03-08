@@ -2,13 +2,13 @@
 
 ###### A lightweight truly functional utility library that follows the 80/20 principle.
 
-We all love *underscore* and *lodash*, but most of the times they add too much code, and therefore, too many KBs that we don't use.
-
-Pareto only has what you really need.
-
 [![build status](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg?style=flat-square)](https://travis-ci.org/concretesolutions/pareto.js)
 [![npm version](https://img.shields.io/npm/v/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 [![npm downloads](https://img.shields.io/npm/dm/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
+
+We all love *underscore* and *lodash*, but most of the times they add too much code, and therefore, too many KBs that we don't use.
+
+Pareto only has what you really need.
 
 ### Advantages
 
