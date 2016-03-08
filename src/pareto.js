@@ -1,48 +1,17 @@
 import ArrayUtils from './utils/array'
+import FunctionalUtils from './utils/functional'
 import ObjectUtils from './utils/object'
 
-const head = array => ArrayUtils.isEmpty(array) ? [] : array[0]
-
-const tail = array => ArrayUtils.isEmpty(array) ? [] : array.slice(1, array.length)
-
-const last = array => ArrayUtils.isEmpty(array) ? [] : array[array.length - 1]
-
-const flatten = array => {
-    if (ArrayUtils.isEmpty(array)) {
-        return []
-    }
-    return array.reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), [])
-}
-
-const remove = (array, props) => {
-    if (ArrayUtils.isEmpty(array)) return []
-    if (!props) return array
-
-    const index = ArrayUtils.findIndexByElement(array, props)
-
-    return (index > -1) ? ArrayUtils.splice(array, index) : array
-}
-
-const curry = (fn, ...args) => {
-	if (args.length === fn.length) {
-		return fn(...args)
-	}
-	return curry.bind(this, fn, ...args)
-}
-
-const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
-
 const Pareto = {
-    head: head,
-    tail: tail,
-    last: last,
-    flatten: flatten,
-    remove: remove,
-    curry: curry,
-    compose: compose,
+    head: ArrayUtils.head,
+    tail: ArrayUtils.tail,
+    last: ArrayUtils.last,
+    flatten: ArrayUtils.flatten,
+    remove: ArrayUtils.remove,
+    where: ArrayUtils.where,
+    curry: FunctionalUtils.curry,
+    compose: FunctionalUtils.compose,
     isEqual: ObjectUtils.isEqual,
-    find: ArrayUtils.findIndexByElement,
-    splice: ArrayUtils.splice
 }
 
 export default Pareto

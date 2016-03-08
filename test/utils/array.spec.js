@@ -45,16 +45,16 @@ describe('findIndexByObject', () => {
     })
 })
 
-describe('findIndexByElement', () => {
+describe('where', () => {
     it('returns the index of the element in an array', () => {
         const array = [{id: 1, name: 'name1'}, {id: 2, name: 'name2'}]
 
-        expect(ArrayUtils.findIndexByElement(null, {id:3})).toBe(-1)
-        expect(ArrayUtils.findIndexByElement(null, {id:3})).toBe(-1)
-        expect(ArrayUtils.findIndexByElement([], {id:3})).toBe(-1)
-        expect(ArrayUtils.findIndexByElement(array)).toBe(-1)
-        expect(ArrayUtils.findIndexByElement(array, {id:3})).toBe(-1)
-        expect(ArrayUtils.findIndexByElement(array, {id:1})).toBe(0)
-        expect(ArrayUtils.findIndexByElement(array, {id:1, name: 'name1'})).toBe(0)
+        expect(ArrayUtils.where(null, {id:3})).toBe(-1)
+        expect(ArrayUtils.where(null, {id:3})).toBe(-1)
+        expect(ArrayUtils.where([], {id:3})).toBe(-1)
+        expect(ArrayUtils.where(array)).toBe(-1)
+        expect(ArrayUtils.where(array, {id:3})).toBe(-1)
+        expect(ArrayUtils.where(array, {id:1})).toBe(0)
+        expect(ArrayUtils.where(array, {id:1, name: 'name1'})).toBe(0)
     })
 })
