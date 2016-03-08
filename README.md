@@ -13,8 +13,9 @@ Pareto only has what you really need.
 ### Advantages
 
 1. It's lightweight
-2. 100% pure functions
-3. Made with the newest stuff: ES6/Babel/Wepback
+2. Only pure functions
+3. Made with the newest stuff: ES6, Babel, Webpack
+4. Encourages immutability
 
 ### Installation
 
@@ -25,6 +26,25 @@ npm install --save paretojs
 ```
 
 This assumes that you’re using [npm](https://www.npmjs.com/) with a module bundler like [Webpack](http://webpack.github.io)
+
+### How
+
+Import pareto.js:
+
+```js
+import _ from 'pareto'
+```
+
+And use it like you would with *underscore* or *lodash*:
+
+```js
+const myArray = [1, 2, 3]
+const newArray = _.remove(myArray, 2)
+
+console.log(myArray) // [1, 2, 3]
+console.log(newArray) // [1, 2]
+
+```
 
 ### License
 
