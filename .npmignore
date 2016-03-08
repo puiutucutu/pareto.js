@@ -6,3 +6,4 @@ src
 .eslintrc
 content
 test
+typings
