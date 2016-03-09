@@ -14,11 +14,22 @@ Pareto only has what you really need.
 
 ### Advantages
 
-1. It's lightweight
-2. Only pure functions
-3. Encourages immutability
+1. Lightweight
+ * [underscore.min.js](https://github.com/jashkenas/underscore/blob/master/underscore-min.js) ~ 16kb
+ * [lodash.min.js](https://github.com/lodash/lodash/blob/master/dist/lodash.min.js) ~ 60kb
+ * pareto.min.js ~ 3kb
+
+2. Functional
+ * Only pure functions
+ * No side-effects
+ * Encourages immutability
+
 4. Better API
-5. Made with the newest stuff: ES6, Babel, Webpack
+
+5. Made with the newest stuff:
+ * ES6
+ * Babel
+ * Webpack
 
 ### Installation
 
