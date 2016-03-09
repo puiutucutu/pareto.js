@@ -32,16 +32,6 @@ describe('ArrayUtils', () => {
         })
     })
 
-    describe('take', () => {
-        it('returns the first x elements from an array', () => {
-            expect(ArrayUtils.take([])).toEqual([])
-            expect(ArrayUtils.take([1,2,3])).toEqual([1,2,3])
-            expect(ArrayUtils.take([1,2,3], 2)).toEqual([1,2])
-            expect(ArrayUtils.take([1,2,3], 4)).toEqual([1,2,3])
-            expect(ArrayUtils.take([1,2,3], -1)).toEqual([1,2,3])
-        })
-    })
-
     describe('findIndexByObject', () => {
         it('returns the index of the object in an array', () => {
             const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]
@@ -95,15 +85,6 @@ describe('ArrayUtils', () => {
             expect(ArrayUtils.remove([1,2,3], 2)).toEqual([1, 3])
             expect(ArrayUtils.remove([{n:1},{n:2},{n:3}], {n:2})).toEqual([{n:1}, {n:3}])
             expect(ArrayUtils.remove([1,2,2,3], 2)).toEqual([1, 2, 3])
-        })
-    })
-
-    describe('removeAll', () => {
-        it('removes all occurences of the element', () => {
-            expect(ArrayUtils.removeAll([], 1)).toEqual([])
-            expect(ArrayUtils.removeAll([1,2,3], 2)).toEqual([1, 3])
-            expect(ArrayUtils.removeAll([{n:1},{n:2},{n:3}], {n:2})).toEqual([{n:1}, {n:3}])
-            expect(ArrayUtils.removeAll([1,2,2,2,2,2,3], 2)).toEqual([1, 3])
         })
     })
 

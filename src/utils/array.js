@@ -6,13 +6,6 @@ const where = (array, properties) => {
     return array.filter((entry) => ObjectUtils.matches(entry, properties))
 }
 
-const take = (array, quantity) => {
-    if (isEmpty(array)) return []
-    if (!quantity || quantity < 1 || quantity > array.length) return array
-
-    return array.slice(0, quantity)
-}
-
 const findIndexByObject = (array, element) => {
     if (isEmpty(array) || !element) return -1
 
@@ -64,21 +57,9 @@ const remove = (array, props) => {
     return (index > -1) ? splice(array, index) : array
 }
 
-const removeAll = (array, props) => {
-    if (isEmpty(array)) return []
-    if (!props) return array
-
-
-    return array.reduce((acc, current) => {
-        array = remove(array, props)
-        return array
-    }, array)
-}
-
 const ArrayUtils = {
     isEmpty: isEmpty,
     where: where,
-    take: take,
     findIndexByObject: findIndexByObject,
     splice: splice,
     head: head,
@@ -86,8 +67,7 @@ const ArrayUtils = {
     last: last,
     flatten: flatten,
     indexOf: indexOf,
-    remove: remove,
-    removeAll: removeAll
+    remove: remove
 }
 
 export default ArrayUtils
