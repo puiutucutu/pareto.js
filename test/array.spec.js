@@ -14,9 +14,7 @@ describe('ArrayUtils', () => {
         it('returns the spliced array', () => {
             const array = [1, 2, 3]
 
-            expect(ArrayUtils.splice(null)).toEqual([])
-            expect(ArrayUtils.splice([])).toEqual([])
-            expect(ArrayUtils.splice([1, 2, 3])).toEqual([])
+            expect(ArrayUtils.splice([], null)).toEqual([])
             expect(ArrayUtils.splice(array, 1)).toEqual([1, 3])
             expect(array).toEqual([1, 2, 3])
         })
@@ -39,7 +37,6 @@ describe('ArrayUtils', () => {
             expect(ArrayUtils.findIndexByObject(null, { id: 3 })).toBe(-1)
             expect(ArrayUtils.findIndexByObject(null, { id: 3 })).toBe(-1)
             expect(ArrayUtils.findIndexByObject([], { id: 3 })).toBe(-1)
-            expect(ArrayUtils.findIndexByObject(array)).toBe(-1)
             expect(ArrayUtils.findIndexByObject(array, { id: 3 })).toBe(-1)
             expect(ArrayUtils.findIndexByObject(array, { id: 1 })).toBe(-1)
             expect(ArrayUtils.findIndexByObject(array, { id: 1, name: 'name1' })).toBe(0)
@@ -95,7 +92,6 @@ describe('ArrayUtils', () => {
             expect(ArrayUtils.indexOf(null, { id: 3 })).toBe(-1)
             expect(ArrayUtils.indexOf(null, { id: 3 })).toBe(-1)
             expect(ArrayUtils.indexOf([], { id: 3 })).toBe(-1)
-            expect(ArrayUtils.indexOf(array)).toBe(-1)
             expect(ArrayUtils.indexOf(array, { id: 3 })).toBe(-1)
             expect(ArrayUtils.indexOf(array, { id: 1 })).toBe(0)
             expect(ArrayUtils.indexOf(array, { id: 1, name: 'name1' })).toBe(0)
