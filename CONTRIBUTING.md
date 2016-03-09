@@ -6,20 +6,26 @@ Fork, then clone the repository:
 git clone https://github.com/<your-username>/pareto.js.git
 ```
 
-If you don't have webpack and mocha yet, run:
+Install mocha:
 
 ```
-npm install -g webpack mocha
+npm install -g mocha
 ```
 
-Run the tests:
+Download the dependencies:
+
+```
+npm install
+```
+
+Run the tests (with coverage):
+
+```
+npm run test
+```
+
+Run the tests (without coverage):
 
 ```
 npm run test-unit
-```
-
-Run the project:
-
-```
-npm run start
 ```

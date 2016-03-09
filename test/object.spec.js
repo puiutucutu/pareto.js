@@ -13,6 +13,12 @@ describe('ObjectUtils', () => {
             expect(ObjectUtils.equals(obj1, obj3)).toBe(true)
             expect(ObjectUtils.equals(obj1, obj4)).toBe(false)
         })
+
+        it('returns true if array object is equal', () => {
+            expect(ObjectUtils.equals([1,2,3], [2,3,4])).toBe(false)
+            expect(ObjectUtils.equals([1,2], [1,2,3])).toBe(false)
+            expect(ObjectUtils.equals([1,2,3], [1,2,3])).toBe(true)
+        })
     })
 
     describe('matches', () => {

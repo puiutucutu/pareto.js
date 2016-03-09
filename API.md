@@ -70,12 +70,11 @@ _.where(array, { id: 1, name: 'name1' }) // [{ id: 1, name: 'name1' }]
 Gets the comparison between objects
 
 ```js
-const object1 = { a:1, b:2 }
-const object2 = { a:1, b:2 }
-const object3 = { a:1}
+_.equals({ a:1, b:2 }, { a:1, b:2 }) // true
+_.equals({ a:1, b:2 }, { a:1}) // false
 
-_.equals(object1, object2) // true
-_.equals(object1, object3) // false
+_.equals([1,2,3], [1,2,3]) // true
+_.equals([1,2,3], [4,5,6]) // false
 ```
 
 **matches** : ```_.matches(object, props)```
