@@ -1,5 +1,5 @@
 .page-header {
-	background-color: #2a0044;
+	background-color: #7a68ae;
 }
 .main-content code {
 	float: left;
@@ -10,7 +10,24 @@
 .main-content ul,  .main-content ol li {
 	margin: 10px;
 }
-
+.main-content .wrap-header-text {
+	text-align: center;
+}
+.wrap-header-text {
+	float: left;
+	width: 100%;
+	margin-bottom: 40px;
+}
+.wrap-header-text h2 {
+	color: #7a68ae;
+}
+.main-content h3 {
+	color: #7a68ae;
+	font-weight: 700;
+}
+.main-content a {
+	color: #7a68ae;
+}
 .site-footer a {
-	color: #2a0044;
+	color: #7a68ae;
 }
