@@ -8,27 +8,23 @@
 [![npm version](https://img.shields.io/npm/v/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 [![npm downloads](https://img.shields.io/npm/dm/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 
-We all love *underscore* and *lodash*, but most of the times they add too much code, and therefore, too many KBs that we don't use.
-
-Pareto only has what you really need.
+Pareto is a small functional utility library that only has what you really need.
 
 [http://www.concretesolutions.com.br/pareto.js/](http://www.concretesolutions.com.br/pareto.js/)
 
 ### Advantages
 
-1. Lightweight
- * [underscore.min.js](https://github.com/jashkenas/underscore/blob/master/underscore-min.js) ~ 16kb
- * [lodash.min.js](https://github.com/lodash/lodash/blob/master/dist/lodash.min.js) ~ 60kb
- * pareto.min.js ~ 3kb
-
-2. Functional
+1. Functional
  * Only pure functions
  * No side-effects
  * Encourages immutability
+ * Auto-curried methods
 
-4. Better API
+2. Lightweight
 
-5. Made with the newest stuff:
+3. Better API
+
+4. Made with the newest stuff:
  * ES6
  * Babel
  * Webpack
@@ -57,7 +53,6 @@ And use it:
 const myArray = [1, 2, 3]
 const newArray = _.remove(myArray, 2)
 
-console.log(myArray) // [1, 2, 3]
 console.log(newArray) // [1, 2]
 
 ```
