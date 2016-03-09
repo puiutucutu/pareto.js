@@ -10,15 +10,15 @@
 
 ### Advantages
 
-1. Functional
+1. Lightweight
+
+2. Functional
  * Only pure functions
  * No side-effects
  * Encourages immutability
  * Auto-curried methods
 
-2. Lightweight
-
-3. Better API
+3. Better and smaller API
 
 4. Made with the newest stuff:
  * ES6
