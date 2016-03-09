@@ -7,3 +7,10 @@
 	margin-bottom: 20px;
 	padding: 20px;
 }
+.main-content ul,  .main-content ol li {
+	margin: 10px;
+}
+
+.site-footer a {
+	color: #2a0044;
+}
