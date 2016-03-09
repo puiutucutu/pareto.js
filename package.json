@@ -1,7 +1,7 @@
 {
   "name": "paretojs",
-  "version": "0.8.2",
-  "description": "A lightweight truly functional utility library that follows the 80/20 principle.",
+  "version": "0.8.3",
+  "description": "A small trully functional utility library that only has what you really need.",
   "main": "src/pareto.js",
   "scripts": {
     "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- --timeout 30000 test/**/*.spec.js",

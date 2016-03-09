@@ -1,3 +1,5 @@
+import FunctionalUtils from './functional'
+
 const equals = (a, b) => {
     const aProps = Object.getOwnPropertyNames(a)
     const bProps = Object.getOwnPropertyNames(b)
@@ -24,8 +26,8 @@ const matches = (obj, props) => {
 }
 
 const ObjectUtils = {
-    equals: equals,
-    matches: matches
+    equals: FunctionalUtils.curry(equals),
+    matches: FunctionalUtils.curry(matches)
 }
 
 export default ObjectUtils

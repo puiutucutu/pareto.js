@@ -20,7 +20,7 @@ const memoize = (f) => {
 const FunctionalUtils = {
     compose: compose,
     curry: curry,
-    memoize: memoize
+    memoize: curry(memoize)
 }
 
 export default FunctionalUtils
