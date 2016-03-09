@@ -1,0 +1,9 @@
+.page-header {
+	background-color: #2a0044;
+}
+.main-content code {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 20px;
+}
