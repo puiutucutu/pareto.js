@@ -12,6 +12,8 @@ We all love *underscore* and *lodash*, but most of the times they add too much c
 
 Pareto only has what you really need.
 
+[http://www.concretesolutions.com.br/pareto.js/](http://www.concretesolutions.com.br/pareto.js/)
+
 ### Advantages
 
 1. Lightweight
