@@ -17,7 +17,8 @@ Pareto only has what you really need.
 1. It's lightweight
 2. Only pure functions
 3. Encourages immutability
-4. Made with the newest stuff: ES6, Babel, Webpack
+4. Better API
+5. Made with the newest stuff: ES6, Babel, Webpack
 
 ### Installation
 
