@@ -116,3 +116,24 @@ const angry = _.compose(toUpperCase, exclaim)
 
 angry('stop') // 'STOP!!!
 ```
+
+**memoize** : ```_.memoize(fn)```
+
+Creates a function that memoizes (caches) the result
+
+```js
+let count = 0
+
+const square = x => {
+    count = count + 1
+    return x * x
+}
+
+const memoSquare = _.memoize(square)
+
+count // 0
+memoSquare(10) // 100
+memoSquare(10) // 100
+memoSquare(10) // 100
+count // 1
+```
