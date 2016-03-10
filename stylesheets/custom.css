@@ -1,5 +1,5 @@
 .page-header {
-	background-color: #7a68ae;
+	background-color: #2a0044;
 }
 .main-content code {
 	float: left;
@@ -10,14 +10,30 @@
 .main-content ul,  .main-content ol li {
 	margin: 10px;
 }
-
+.logo {
+	color: #fff;
+	height: 230px;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+.logo:hover {
+	text-decoration: none;
+}
+.logo img {
+	width: 130px;
+}
+.logo span {
+	display: block;
+	margin-top: -30px;
+}
 .main-content h3 {
-	color: #7a68ae;
+	color: #2a0044;
 	font-weight: 700;
 }
 .main-content a {
-	color: #7a68ae;
+	color: #2a0044;
 }
 .site-footer a {
-	color: #7a68ae;
+	color: #2a0044;
 }
