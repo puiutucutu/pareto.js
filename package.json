@@ -1,12 +1,13 @@
 {
   "name": "paretojs",
-  "version": "0.8.10",
+  "version": "0.8.11",
   "description": "A small trully functional utility library that only has what you really need.",
   "main": "src/pareto.js",
   "files": [
     "dist",
     "lib",
-    "es"
+    "es",
+    "src"
   ],
   "scripts": {
     "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- --timeout 30000 test/**/*.spec.js",
