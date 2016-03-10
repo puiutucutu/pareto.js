@@ -37,21 +37,32 @@ This assumes that you’re using [npm](https://www.npmjs.com/) with a module bun
 
 ### How
 
-Import pareto.js:
+Import pareto.js
+
+ES6:
 
 ```js
 import _ from 'paretojs'
 ```
 
+ES5 (CommonJS):
+
+```js
+var _ = require('paretojs');
+```
+
+ES5 (UMD):
+
+```js
+var _ = Pareto;
+```
+
 And use it:
 
 ```js
-const myArray = [1, 2, 3]
-const newArray = _.remove(myArray, 2)
-
-console.log(newArray) // [1, 3]
-
+_.remove([1, 2 , 3], 2) // [1, 3]
 ```
+
 ### Docs
 
 * [API Reference](https://github.com/concretesolutions/pareto.js/blob/master/API.md)
