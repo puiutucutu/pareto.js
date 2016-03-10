@@ -1,7 +1,7 @@
 {
   "name": "paretojs",
-  "version": "0.8.18",
-  "description": "A small trully functional utility library that only has what you really need.",
+  "version": "0.8.19",
+  "description": "A trully small functional utility library that only has what you really need.",
   "main": "dist/pareto.js",
   "files": [
     "dist"

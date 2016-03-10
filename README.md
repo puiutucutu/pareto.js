@@ -1,6 +1,6 @@
 # pareto.js
 
-###### A small trully functional utility library that only has what you really need.
+###### A trully functional small utility library that only has what you really need.
 
 [![build status](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg?style=flat-square)](https://travis-ci.org/concretesolutions/pareto.js)
 [![code climate](https://codeclimate.com/github/concretesolutions/pareto.js/badges/gpa.svg)](https://codeclimate.com/github/concretesolutions/pareto.js)
