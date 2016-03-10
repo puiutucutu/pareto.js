@@ -8,7 +8,9 @@ var config = {
     ],
     output: {
         path: __dirname + '/dist',
-        filename: "pareto.min.js"
+        filename: "pareto.min.js",
+        library: 'paretojs',
+        libraryTarget: 'umd'
     },
     module: {
         loaders: [
