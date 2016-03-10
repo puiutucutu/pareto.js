@@ -37,3 +37,12 @@
 .site-footer a {
 	color: #2a0044;
 }
+@media screen and (max-width: 480px) {
+	.logo {
+		height: 140px;
+	}
+	.logo img {
+		width: 80px;
+		margin-bottom: 20px;
+	}
+}
