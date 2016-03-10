@@ -49,7 +49,7 @@ And use it:
 const myArray = [1, 2, 3]
 const newArray = _.remove(myArray, 2)
 
-console.log(newArray) // [1, 2]
+console.log(newArray) // [1, 3]
 
 ```
 ### Docs
