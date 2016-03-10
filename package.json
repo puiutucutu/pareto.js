@@ -1,14 +1,21 @@
 {
   "name": "paretojs",
-  "version": "0.8.19",
+  "version": "0.8.20",
   "description": "A trully small functional utility library that only has what you really need.",
-  "main": "dist/pareto.js",
+  "main": "lib/pareto.js",
   "files": [
-    "dist"
+    "dist",
+    "lib",
+    "es",
+    "src"
   ],
   "scripts": {
     "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- --timeout 30000 test/**/*.spec.js",
-    "build": "babel src --out-dir dist",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack src/pareto.js dist/pareto.js",
+    "build:umd:min": "cross-env BABEL_ENV=commonjs NODE_ENV=production webpack src/pareto.js dist/pareto.min.js",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "prepublish": "npm run build",
     "test": "npm run coverage",
     "test-unit": "mocha --compilers js:babel-core/register test/**/*.spec.js",
