@@ -4,3 +4,4 @@
 .eslintignore
 .eslintrc
 test
+src
