@@ -10,18 +10,7 @@
 .main-content ul,  .main-content ol li {
 	margin: 10px;
 }
-.main-content .wrap-header-text {
-	text-align: center;
-}
-.wrap-header-text {
-	float: left;
-	width: 100%;
-	margin-bottom: 40px;
-}
-.wrap-header-text h2 {
-	font-size: 24px;
-	color: #7a68ae;
-}
+
 .main-content h3 {
 	color: #7a68ae;
 	font-weight: 700;
