@@ -17,10 +17,31 @@ const memoize = (f) => {
             f.memoize[args] = f.apply(this, args)
     }
 }
+
+const debounce = (func, threshold, immediate) => {
+    return () => {
+        let timeout, obj = this, args = arguments
+
+        const delayed = () => {
+            if (!immediate)
+                func.apply(obj, args)
+            timeout = null
+        }
+
+        if (timeout)
+            clearTimeout(timeout)
+        else if (immediate)
+            func.apply(obj, args)
+
+        timeout = setTimeout(delayed, threshold || 100)
+    }
+}
+
 const FunctionalUtils = {
     compose: compose,
     curry: curry,
-    memoize: curry(memoize)
+    memoize: memoize,
+    debounce: debounce
 }
 
 export default FunctionalUtils

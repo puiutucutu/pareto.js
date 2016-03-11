@@ -137,3 +137,19 @@ memoSquare(10) // 100
 memoSquare(10) // 100
 count // 1
 ```
+
+**debounce** : ```_.debounce(fn, time)```
+
+Creates and returns a new debounced version of the passed function which will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.
+
+```js
+let a = 1
+const fn = () => a = 42
+
+const debounce = _.debounce(fn, 500)
+debounce()
+
+console.log(a) // 1 before 500ms
+
+console.log(a) // 42 after 500ms
+```

@@ -49,4 +49,21 @@ describe('FunctionalUtils', () => {
             expect(count).toBe(2)
         })
     })
+
+    describe('debounce', () => {
+        it('debounces functions', (done) => {
+            let a = 1
+            const fn = () => a = 42
+
+            const debounced = FunctionalUtils.debounce(fn, 100)
+            debounced()
+
+            expect(a).toBe(1)
+
+            setTimeout(() => {
+                expect(a).toBe(42)
+                done()
+            }, 300)
+        })
+    })
 })

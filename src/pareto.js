@@ -13,6 +13,7 @@ const Pareto = {
     curry: FunctionalUtils.curry,
     compose: FunctionalUtils.compose,
     memoize: FunctionalUtils.memoize,
+    debounce: FunctionalUtils.debounce,
     equals: ObjectUtils.equals,
     matches: ObjectUtils.matches
 }
