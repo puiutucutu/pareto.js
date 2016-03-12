@@ -153,3 +153,20 @@ console.log(a) // 1 before 500ms
 
 console.log(a) // 42 after 500ms
 ```
+
+**throttle** : ```_.throttle(fn, time)```
+
+Creates and returns a new throttled version of the passed function that when invoked repeatedly will only actually call the original function at most once per every wait milliseconds.
+```js
+let a = 1
+const fn = () => a++
+
+const throttle = _.throttle(fn, 500)
+throttle()
+throttle()
+throttle()
+
+console.log(a) // 2, the first call will execute immediately
+console.log(a) // 3, after 500ms
+console.log(a) // 4, after 1000ms
+```

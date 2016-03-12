@@ -8,7 +8,7 @@ const curry = (fn, ...args) => {
 const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
 
 const memoize = (f) => {
-    return function() {
+    return function () {
         const args = Array.prototype.slice.call(arguments)
 
         f.memoize = f.memoize || {}
@@ -37,11 +37,25 @@ const debounce = (fn, wait = 100, immediate) => {
     }
 }
 
+const throttle = (fn, limit) => {
+    let wait = false
+
+    return () => {
+        if (!wait) {
+            fn.call()
+            wait = true
+            setTimeout(() => wait = false, limit)
+        }
+    }
+}
+
+
 const FunctionalUtils = {
     compose,
     curry,
     memoize,
-    debounce
+    debounce,
+    throttle
 }
 
 export default FunctionalUtils

@@ -66,4 +66,28 @@ describe('FunctionalUtils', () => {
             }, 300)
         })
     })
+
+    describe('throttle', () => {
+        it('throttles functions', (done) => {
+            let a = 1
+            const fn = () => a++
+
+            const throttled = FunctionalUtils.throttle(fn, 200)
+            throttled()
+
+            expect(a).toBe(2)
+
+            setTimeout(() => {
+                throttled()
+                expect(a).toBe(2)
+                done()
+            }, 100)
+
+            setTimeout(() => {
+                throttled()
+                expect(a).toBe(3)
+                done()
+            }, 300)
+        })
+    })
 })
