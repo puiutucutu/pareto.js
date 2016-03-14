@@ -17,7 +17,7 @@ const throttle = FunctionalUtils.throttle
 const equals = ObjectUtils.equals
 const matches = ObjectUtils.matches
 
-export default {
+export {
     head,
     tail,
     last,
