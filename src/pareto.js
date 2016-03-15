@@ -17,7 +17,7 @@ const throttle = FunctionalUtils.throttle
 const equals = ObjectUtils.equals
 const matches = ObjectUtils.matches
 
-export default {
+const Pareto = {
     head,
     tail,
     last,
@@ -33,3 +33,5 @@ export default {
     equals,
     matches
 }
+
+export default Pareto

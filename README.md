@@ -42,7 +42,7 @@ Import pareto.js
 ES6:
 
 ```js
-import _ from 'paretojs'
+import * as _ from 'paretojs'
 ```
 
 ES5 (CommonJS):
