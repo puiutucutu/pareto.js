@@ -1,4 +1,23 @@
 import FunctionalUtils from './functional'
+import ArrayUtils from './array'
+
+const checkObjectProperties = (a, b, aProps, bProps) => {
+    for (let i = 0; i < aProps.length; i++) {
+        const propName = aProps[i]
+
+        let aProp = a[propName]
+        let bProp = b[propName]
+
+        if (Array.isArray(aProp) && Array.isArray(bProp)) {
+            if (!ArrayUtils.isEqual(aProp, bProp)) return false
+        }
+        else if (aProp !== bProp) {
+            return false
+        }
+    }
+
+    return true
+}
 
 const equals = (a, b) => {
     const aProps = Object.getOwnPropertyNames(a)
@@ -8,15 +27,7 @@ const equals = (a, b) => {
         return false
     }
 
-    for (let i = 0; i < aProps.length; i++) {
-        const propName = aProps[i]
-
-        if (a[propName] !== b[propName]) {
-            return false
-        }
-    }
-
-    return true
+    return checkObjectProperties(a, b, aProps, bProps)
 }
 
 const matches = (obj, props) => {

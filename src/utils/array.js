@@ -7,6 +7,15 @@ const where = (array, properties) => {
     return array.filter((entry) => ObjectUtils.matches(entry, properties))
 }
 
+const isEqual = (array1, array2) => {
+    if (!Array.isArray(array1) || !Array.isArray(array2)) return false
+    if (array1.length !== array2.length) return false
+
+    return array1.every((element, index) => {
+        return element === array2[index]
+    })
+}
+
 const findIndexByObject = (array, element) => {
     if (isEmpty(array) || !element) return -1
 
@@ -61,6 +70,7 @@ const remove = (array, props) => {
 const ArrayUtils = {
     isEmpty: FunctionalUtils.curry(isEmpty),
     where: FunctionalUtils.curry(where),
+    isEqual: FunctionalUtils.curry(isEqual),
     findIndexByObject: FunctionalUtils.curry(findIndexByObject),
     splice: FunctionalUtils.curry(splice),
     head: FunctionalUtils.curry(head),

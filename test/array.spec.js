@@ -10,6 +10,15 @@ describe('ArrayUtils', () => {
         })
     })
 
+    describe('isEqual', () => {
+        it('returns true if arrays are equal', () => {
+            expect(ArrayUtils.isEqual([], [])).toBe(true)
+            expect(ArrayUtils.isEqual([1,2,3], [1,2,3])).toBe(true)
+            expect(ArrayUtils.isEqual([1,2], [1,2,3])).toBe(false)
+            expect(ArrayUtils.isEqual([1,2], 'lalala')).toBe(false)
+        })
+    })
+
     describe('splice', () => {
         it('returns the spliced array', () => {
             const array = [1, 2, 3]
