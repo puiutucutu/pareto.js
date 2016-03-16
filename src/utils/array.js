@@ -12,7 +12,7 @@ const isEqual = (array1, array2) => {
     if (array1.length !== array2.length) return false
 
     return array1.every((element, index) => {
-        return element === array2[index]
+        return ObjectUtils.equals(element, array2[index])
     })
 }
 
