@@ -100,7 +100,7 @@ _.matches(object1, { a: 1, b: 2 }) // true
 _.matches(object1, { a: 3 }) // false
 ```
 
-###### Functional
+###### Function
 
 **curry** : ```_.curry(args)```
 
