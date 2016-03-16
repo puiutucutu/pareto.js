@@ -1,5 +1,5 @@
 import expect from 'expect'
-import ArrayUtils from '..//src/utils/array'
+import ArrayUtils from '../src/utils/array'
 
 describe('ArrayUtils', () => {
     describe('isEmpty', () => {

@@ -1,4 +1,4 @@
-import FunctionalUtils from './functional'
+import FunctionUtils from './function'
 import ArrayUtils from './array'
 
 const checkObjectProperties = (a, b, aProps, bProps) => {
@@ -37,8 +37,8 @@ const matches = (obj, props) => {
 }
 
 const ObjectUtils = {
-    equals: FunctionalUtils.curry(equals),
-    matches: FunctionalUtils.curry(matches)
+    equals: FunctionUtils.curry(equals),
+    matches: FunctionUtils.curry(matches)
 }
 
 export default ObjectUtils

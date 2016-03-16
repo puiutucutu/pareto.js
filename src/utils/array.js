@@ -1,5 +1,5 @@
 import ObjectUtils from './object'
-import FunctionalUtils from './functional'
+import FunctionUtils from './function'
 
 const isEmpty = array => !(array && array.length > 0)
 
@@ -68,17 +68,17 @@ const remove = (array, props) => {
 }
 
 const ArrayUtils = {
-    isEmpty: FunctionalUtils.curry(isEmpty),
-    where: FunctionalUtils.curry(where),
-    isEqual: FunctionalUtils.curry(isEqual),
-    findIndexByObject: FunctionalUtils.curry(findIndexByObject),
-    splice: FunctionalUtils.curry(splice),
-    head: FunctionalUtils.curry(head),
-    tail: FunctionalUtils.curry(tail),
-    last: FunctionalUtils.curry(last),
-    flatten: FunctionalUtils.curry(flatten),
-    indexOf: FunctionalUtils.curry(indexOf),
-    remove: FunctionalUtils.curry(remove)
+    isEmpty: FunctionUtils.curry(isEmpty),
+    where: FunctionUtils.curry(where),
+    isEqual: FunctionUtils.curry(isEqual),
+    findIndexByObject: FunctionUtils.curry(findIndexByObject),
+    splice: FunctionUtils.curry(splice),
+    head: FunctionUtils.curry(head),
+    tail: FunctionUtils.curry(tail),
+    last: FunctionUtils.curry(last),
+    flatten: FunctionUtils.curry(flatten),
+    indexOf: FunctionUtils.curry(indexOf),
+    remove: FunctionUtils.curry(remove)
 }
 
 export default ArrayUtils

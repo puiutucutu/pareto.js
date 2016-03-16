@@ -1,5 +1,5 @@
 import ArrayUtils from './utils/array'
-import FunctionalUtils from './utils/functional'
+import FunctionUtils from './utils/function'
 import ObjectUtils from './utils/object'
 
 const head = ArrayUtils.head
@@ -9,11 +9,11 @@ const flatten = ArrayUtils.flatten
 const remove = ArrayUtils.remove
 const indexOf = ArrayUtils.indexOf
 const where = ArrayUtils.where
-const curry = FunctionalUtils.curry
-const compose = FunctionalUtils.compose
-const debounce = FunctionalUtils.debounce
-const memoize = FunctionalUtils.memoize
-const throttle = FunctionalUtils.throttle
+const curry = FunctionUtils.curry
+const compose = FunctionUtils.compose
+const debounce = FunctionUtils.debounce
+const memoize = FunctionUtils.memoize
+const throttle = FunctionUtils.throttle
 const equals = ObjectUtils.equals
 const matches = ObjectUtils.matches
 const isEmpty = ArrayUtils.isEmpty
