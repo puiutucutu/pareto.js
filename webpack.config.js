@@ -11,7 +11,7 @@ var config = {
     ]
   },
   output: {
-    library: 'Pareto',
+    library: '_',
     libraryTarget: 'umd'
   },
   plugins: [

@@ -59,8 +59,8 @@ var _ = require('paretojs');
 
 ES5 (UMD):
 
-```js
-var _ = Pareto;
+```html
+<script src="node_modules/paretojs/dist/pareto.min.js"></script>
 ```
 
 And use it:
