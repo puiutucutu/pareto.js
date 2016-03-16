@@ -16,6 +16,7 @@ const memoize = FunctionalUtils.memoize
 const throttle = FunctionalUtils.throttle
 const equals = ObjectUtils.equals
 const matches = ObjectUtils.matches
+const isEmpty = ArrayUtils.isEmpty
 
 const Pareto = {
     head,
@@ -31,7 +32,8 @@ const Pareto = {
     debounce,
     throttle,
     equals,
-    matches
+    matches,
+	isEmpty
 }
 
 export default Pareto

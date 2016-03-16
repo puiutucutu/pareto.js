@@ -63,6 +63,17 @@ _.where(array, { id: 1 })) // [{ id: 1, name: 'name1' }]
 _.where(array, { id: 1, name: 'name1' }) // [{ id: 1, name: 'name1' }]
 ```
 
+**isEmpty** : ```_.isEmpty(array)```
+
+Returns true if an array contains no values.
+
+```js
+
+_.isEmpty(null) // true
+_.isEmpty([]) // true
+_.isEmpty(['one']) // false
+```
+
 ###### Object
 
 **equals** : ```_.equals(object1, object2)```
