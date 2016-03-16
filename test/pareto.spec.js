@@ -5,7 +5,7 @@ describe('Pareto', () => {
     describe('init', () => {
         const methods = Object.keys(_)
 
-        expect(methods.length).toBe(14)
+        expect(methods.length).toBe(15)
         expect(methods).toContain('head')
         expect(methods).toContain('tail')
         expect(methods).toContain('last')
@@ -20,5 +20,6 @@ describe('Pareto', () => {
         expect(methods).toContain('debounce')
         expect(methods).toContain('equals')
         expect(methods).toContain('matches')
+		expect(methods).toContain('isEmpty')
     })
 })
