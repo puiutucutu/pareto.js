@@ -20,6 +20,6 @@ describe('Pareto', () => {
         expect(methods).toContain('debounce')
         expect(methods).toContain('equals')
         expect(methods).toContain('matches')
-		expect(methods).toContain('matches')
+		expect(methods).toContain('isEmpty')
     })
 })
