@@ -60,17 +60,20 @@
 
         <p>ES6:</p>
         <code>
-          import _ from 'paretojs'
+          import * as _ from 'paretojs'
         </code>
 
-        <p>ES5(CommonJS):</p>
+        <p>or</p>
+        <code>import { remove } from 'paretojs'</code>
+
+        <p>ES5 (CommonJS):</p>
         <code>
           var _ = require('paretojs');
         </code>
 
-        <p>ES5(UMD):</p>
+        <p>ES5 (UMD):</p>
         <code>
-          var _ = Pareto;
+          script src="node_modules/paretojs/dist/pareto.min.js"
         </code>
 
         <p>And use it:</p>
