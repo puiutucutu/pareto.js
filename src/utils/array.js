@@ -3,17 +3,13 @@ import FunctionUtils from './function'
 
 const isEmpty = array => !(array && array.length > 0)
 
-const where = (array, properties) => {
-    return array.filter((entry) => ObjectUtils.matches(entry, properties))
-}
+const where = (array, properties) => array.filter((entry) => ObjectUtils.matches(entry, properties))
 
 const isEqual = (array1, array2) => {
     if (!Array.isArray(array1) || !Array.isArray(array2)) return false
     if (array1.length !== array2.length) return false
 
-    return array1.every((element, index) => {
-        return ObjectUtils.equals(element, array2[index])
-    })
+    return array1.every((element, index) => ObjectUtils.equals(element, array2[index]))
 }
 
 const findIndexByObject = (array, element) => {

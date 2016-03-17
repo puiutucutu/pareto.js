@@ -16,8 +16,8 @@ describe('FunctionUtils', () => {
     describe('compose', () => {
         it('composes functions', () => {
             const toUpperCase = x => x.toUpperCase()
-            const exclaim = x => x + '!'
-            const moreExclaim = x => x + '!!'
+            const exclaim = x => `${x}!`
+            const moreExclaim = x => `${x}!!`
 
             expect(FunctionUtils.compose(toUpperCase, exclaim)('test')).toBe('TEST!')
             expect(FunctionUtils.compose(toUpperCase, exclaim, moreExclaim)('test')).toBe('TEST!!!')

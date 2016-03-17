@@ -5,8 +5,8 @@ const checkObjectProperties = (a, b, aProps, bProps) => {
     for (let i = 0; i < aProps.length; i++) {
         const propName = aProps[i]
 
-        let aProp = a[propName]
-        let bProp = b[propName]
+        const aProp = a[propName]
+        const bProp = b[propName]
 
         if (Array.isArray(aProp) && Array.isArray(bProp)) {
             if (!ArrayUtils.isEqual(aProp, bProp)) return false
@@ -30,11 +30,7 @@ const equals = (a, b) => {
     return checkObjectProperties(a, b, aProps, bProps)
 }
 
-const matches = (obj, props) => {
-    return Object.keys(props).every((key) => {
-        return obj[key] === props[key]
-    })
-}
+const matches = (obj, props) => Object.keys(props).every((key) => obj[key] === props[key])
 
 const ObjectUtils = {
     equals: FunctionUtils.curry(equals),

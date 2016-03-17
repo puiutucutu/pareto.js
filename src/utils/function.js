@@ -7,35 +7,33 @@ const curry = (fn, ...args) => {
 
 const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
 
-const memoize = (f) => {
-    return function () {
-        const args = Array.prototype.slice.call(arguments)
+const memoize = f => function (...params) {
+    const args = Array.prototype.slice.call(params)
 
-        f.memoize = f.memoize || {}
+    f.memoize = f.memoize || {}
 
-        return (args in f.memoize) ? f.memoize[args] :
-            f.memoize[args] = f.apply(this, args)
-    }
+    return (args in f.memoize) ? f.memoize[args] :
+        f.memoize[args] = f.apply(this, args)
 }
 
-const debounce = (fn, wait = 100, immediate) => {
-    return () => {
-        let timeout, obj = this, args = arguments
+const debounce = (fn, wait = 100, immediate) => (...args) => {
+    const obj = this
+    let timeout
 
-        const delayed = () => {
-            if (!immediate)
-                fn.apply(obj, args)
-            timeout = null
-        }
-
-        if (timeout)
-            clearTimeout(timeout)
-        else if (immediate)
+    const delayed = () => {
+        if (!immediate)
             fn.apply(obj, args)
-
-        timeout = setTimeout(delayed, wait)
+        timeout = null
     }
+
+    if (timeout)
+        clearTimeout(timeout)
+    else if (immediate)
+        fn.apply(obj, args)
+
+    timeout = setTimeout(delayed, wait)
 }
+
 
 const throttle = (fn, limit) => {
     let wait = false
