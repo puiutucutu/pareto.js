@@ -51,7 +51,7 @@ describe('FunctionUtils', () => {
     })
 
     describe('debounce', () => {
-        it('debounces functions', (done) => {
+        it('debounces a function', (done) => {
             let a = 1
             const fn = () => a = 42
 
@@ -59,6 +59,21 @@ describe('FunctionUtils', () => {
             debounced()
 
             expect(a).toBe(1)
+
+            setTimeout(() => {
+                expect(a).toBe(42)
+                done()
+            }, 300)
+        })
+
+        it('invokes immediately', (done) => {
+            let a = 1
+            const fn = () => a = 42
+
+            const debounced = FunctionUtils.debounce(fn, 100, true)
+            debounced()
+
+            expect(a).toBe(42)
 
             setTimeout(() => {
                 expect(a).toBe(42)
