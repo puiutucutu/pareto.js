@@ -21,14 +21,6 @@ const findIndexByObject = (array, element) => {
     return -1
 }
 
-const splice = (array, index) => {
-    if (isEmpty(array) || !index) return []
-
-    const newArray = array.slice(0)
-    newArray.splice(index, 1)
-    return newArray
-}
-
 const head = array => isEmpty(array) ? undefined : array[0]
 
 const tail = array => isEmpty(array) ? [] : array.slice(1, array.length)
@@ -60,7 +52,7 @@ const remove = (array, props) => {
 
     const index = indexOf(array, props)
 
-    return (index > -1) ? splice(array, index) : array
+    return (index > -1) ? [...array.slice(0, index), ...array.slice(index + 1)] : array
 }
 
 const ArrayUtils = {
@@ -68,7 +60,6 @@ const ArrayUtils = {
     where: FunctionUtils.curry(where),
     isEqual: FunctionUtils.curry(isEqual),
     findIndexByObject: FunctionUtils.curry(findIndexByObject),
-    splice: FunctionUtils.curry(splice),
     head: FunctionUtils.curry(head),
     tail: FunctionUtils.curry(tail),
     last: FunctionUtils.curry(last),

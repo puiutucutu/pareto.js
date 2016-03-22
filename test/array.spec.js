@@ -22,16 +22,6 @@ describe('ArrayUtils', () => {
         })
     })
 
-    describe('splice', () => {
-        it('returns the spliced array', () => {
-            const array = [1, 2, 3]
-
-            expect(ArrayUtils.splice([], null)).toEqual([])
-            expect(ArrayUtils.splice(array, 1)).toEqual([1, 3])
-            expect(array).toEqual([1, 2, 3])
-        })
-    })
-
     describe('where', () => {
         it('returns the objects that matched the properties', () => {
             const array = [{ id: 1, name: 'name1' }, { id: 2, name: 'name2' }]
