@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A trully small functional utility library that only has what you really need.",
   "main": "lib/pareto.js",
   "files": [
@@ -10,7 +10,7 @@
     "src"
   ],
   "scripts": {
-    "clean": "rimraf lib dist es coverage",
+    "clean": "coverage",
     "lint": "eslint src test",
     "check": "npm run lint && npm run test",
     "coverage": "babel-node node_modules/.bin/babel-istanbul cover _mocha -- --timeout 30000 test/**/*.spec.js",
