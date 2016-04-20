@@ -42,13 +42,7 @@ Import pareto.js
 ES6:
 
 ```js
-import * as _ from 'paretojs'
-```
-
-or only the method you need:
-
-```js
-import { remove } from 'paretojs'
+import _ from 'paretojs'
 ```
 
 ES5 (CommonJS):
