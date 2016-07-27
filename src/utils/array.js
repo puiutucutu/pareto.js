@@ -37,7 +37,7 @@ const flatten = array => {
 const indexOf = (array, props) => {
     if (isEmpty(array) || !props) return -1
 
-    if (typeof(props) === 'object') {
+    if (typeof (props) === 'object') {
         const element = where(array, props)
         return findIndexByObject(array, element[0])
     }
