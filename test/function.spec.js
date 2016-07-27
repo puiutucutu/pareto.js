@@ -1,15 +1,18 @@
 import expect from 'expect'
-import FunctionUtils from '../src/utils/function'
 
-describe('FunctionUtils', () => {
+import {
+    curry, compose, memoize, debounce, throttle,
+} from '../src/utils/function'
+
+describe('function', () => {
     describe('curry', () => {
         it('returns the curried function', () => {
             const add = (a, b) => a + b
 
-            expect(FunctionUtils.curry(add, 1, 2)).toBe(3)
-            expect(FunctionUtils.curry(add)(1)(2)).toBe(3)
-            expect(FunctionUtils.curry(add)(1, 2)).toBe(3)
-            expect(FunctionUtils.curry(add, 1)(2)).toBe(3)
+            expect(curry(add, 1, 2)).toBe(3)
+            expect(curry(add)(1)(2)).toBe(3)
+            expect(curry(add)(1, 2)).toBe(3)
+            expect(curry(add, 1)(2)).toBe(3)
         })
     })
 
@@ -19,8 +22,8 @@ describe('FunctionUtils', () => {
             const exclaim = x => `${x}!`
             const moreExclaim = x => `${x}!!`
 
-            expect(FunctionUtils.compose(toUpperCase, exclaim)('test')).toBe('TEST!')
-            expect(FunctionUtils.compose(toUpperCase, exclaim, moreExclaim)('test')).toBe('TEST!!!')
+            expect(compose(toUpperCase, exclaim)('test')).toBe('TEST!')
+            expect(compose(toUpperCase, exclaim, moreExclaim)('test')).toBe('TEST!!!')
         })
     })
 
@@ -33,7 +36,7 @@ describe('FunctionUtils', () => {
                 return x * x
             }
 
-            const memoSquare = FunctionUtils.memoize(square)
+            const memoSquare = memoize(square)
 
             expect(count).toBe(0)
 
@@ -55,7 +58,7 @@ describe('FunctionUtils', () => {
             let a = 1
             const fn = () => a = 42
 
-            const debounced = FunctionUtils.debounce(fn, 100)
+            const debounced = debounce(fn, 100)
             debounced()
 
             expect(a).toBe(1)
@@ -70,7 +73,7 @@ describe('FunctionUtils', () => {
             let a = 1
             const fn = () => a = 42
 
-            const debounced = FunctionUtils.debounce(fn, 100, true)
+            const debounced = debounce(fn, 100, true)
             debounced()
 
             expect(a).toBe(42)
@@ -87,7 +90,7 @@ describe('FunctionUtils', () => {
             let a = 1
             const fn = () => a++
 
-            const throttled = FunctionUtils.throttle(fn, 200)
+            const throttled = throttle(fn, 200)
             throttled()
 
             expect(a).toBe(2)

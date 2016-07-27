@@ -1,13 +1,13 @@
-const curry = (fn, ...args) => {
+export const curry = (fn, ...args) => {
     if (args.length === fn.length) {
         return fn(...args)
     }
     return curry.bind(this, fn, ...args)
 }
 
-const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
+export const compose = (...fns) => fns.reduce((f, g) => (...args) => f(g(...args)))
 
-const memoize = f => function (...params) {
+export const memoize = f => function (...params) {
     const args = Array.prototype.slice.call(params)
 
     f.memoize = f.memoize || {}
@@ -16,7 +16,7 @@ const memoize = f => function (...params) {
         f.memoize[args] = f.apply(this, args)
 }
 
-const debounce = (fn, wait = 100, immediate) => (...args) => {
+export const debounce = (fn, wait = 100, immediate) => (...args) => {
     const obj = this
     let timeout
 
@@ -35,7 +35,7 @@ const debounce = (fn, wait = 100, immediate) => (...args) => {
 }
 
 
-const throttle = (fn, limit) => {
+export const throttle = (fn, limit) => {
     let wait = false
 
     return () => {
@@ -46,14 +46,3 @@ const throttle = (fn, limit) => {
         }
     }
 }
-
-
-const FunctionUtils = {
-    compose,
-    curry,
-    memoize,
-    debounce,
-    throttle
-}
-
-export default FunctionUtils

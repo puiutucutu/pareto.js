@@ -1,7 +1,8 @@
-import FunctionUtils from './function'
-import ArrayUtils from './array'
+import {
+    isEqual
+} from './array'
 
-const checkObjectProperties = (a, b, aProps, bProps) => {
+export const checkObjectProperties = (a, b, aProps, bProps) => {
     for (let i = 0; i < aProps.length; i++) {
         const propName = aProps[i]
 
@@ -9,7 +10,7 @@ const checkObjectProperties = (a, b, aProps, bProps) => {
         const bProp = b[propName]
 
         if (Array.isArray(aProp) && Array.isArray(bProp)) {
-            if (!ArrayUtils.isEqual(aProp, bProp)) return false
+            if (!isEqual(aProp, bProp)) return false
         }
         else if (aProp !== bProp) {
             return false
@@ -19,7 +20,7 @@ const checkObjectProperties = (a, b, aProps, bProps) => {
     return true
 }
 
-const equals = (a, b) => {
+export const equals = (a, b) => {
     const aProps = Object.getOwnPropertyNames(a)
     const bProps = Object.getOwnPropertyNames(b)
 
@@ -30,11 +31,4 @@ const equals = (a, b) => {
     return checkObjectProperties(a, b, aProps, bProps)
 }
 
-const matches = (obj, props) => Object.keys(props).every((key) => obj[key] === props[key])
-
-const ObjectUtils = {
-    equals: FunctionUtils.curry(equals),
-    matches: FunctionUtils.curry(matches)
-}
-
-export default ObjectUtils
+export const matches = (obj, props) => Object.keys(props).every((key) => obj[key] === props[key])
