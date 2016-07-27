@@ -14,7 +14,6 @@
  * Only pure functions
  * No side-effects
  * Encourages immutability
- * Auto-curried methods
 
 3. Better and smaller API
 
