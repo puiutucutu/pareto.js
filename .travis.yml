@@ -15,4 +15,3 @@ script:
   - npm run build
 after_script:
   - npm run coverage:report
-  - npm publish
