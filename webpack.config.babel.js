@@ -7,7 +7,7 @@ export default {
   output: {
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'paretojs',
+    library: '_',
   },
   devtool: 'source-map',
   module: {

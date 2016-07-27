@@ -43,16 +43,29 @@ ES6:
 import _ from 'paretojs'
 ```
 
+or
+
+```js
+import { head, tail } from 'paretojs'
+```
+
 ES5 (CommonJS):
 
 ```js
 var _ = require('paretojs');
 ```
 
+or 
+
+```js
+var head = require('paretojs').head;
+var tail = require('paretojs').tail;
+```
+
 ES5 (UMD):
 
 ```html
-<script src="node_modules/paretojs/dist/pareto.min.js"></script>
+<script src="node_modules/paretojs/dist/index.umd.min.js"></script>
 ```
 
 And use it:
