@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A trully small functional utility library that only has what you really need.",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "coverage:check": "nyc check-coverage --statements 90 --branches 90 --functions 90 --lines 90",
     "coverage:report": "cat ./coverage/lcov.info | codecov",
     "lint": "eslint src test",
-    "prebuild": "rimraf dist",
+    "clean": "rimraf dist",
+    "prebuild": "npm run lint && npm run test && npm run clean",
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --copy-files --out-dir dist --ignore *.spec.js src",
     "build:umd": "webpack --output-filename index.umd.js",
