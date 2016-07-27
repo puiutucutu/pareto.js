@@ -78,4 +78,3 @@ _.remove([1, 2 , 3], 2) // [1, 3]
 * [API Reference](https://github.com/concretesolutions/pareto.js/blob/master/API.md)
 * [Contributing](https://github.com/concretesolutions/pareto.js/blob/master/CONTRIBUTING.md)
 * [License](https://github.com/concretesolutions/pareto.js/blob/master/LICENSE.md)
-* [Website](http://www.concretesolutions.com.br/pareto.js/)
