@@ -3,7 +3,6 @@
 ###### A trully functional small utility library that only has what you really need.
 
 [![build](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg?style=flat-square)](https://travis-ci.org/concretesolutions/pareto.js)
-[![codecov](https://codecov.io/gh/concretesolutions/pareto.js/branch/master/graph/badge.svg?style=flat-square)](https://codecov.io/gh/concretesolutions/pareto.js)
 [![npm](https://img.shields.io/npm/v/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 [![downloads](https://img.shields.io/npm/dm/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 
