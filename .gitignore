@@ -1,5 +1,6 @@
 *.log
 .nyc_output
 node_modules
+typings
 coverage
 dist
