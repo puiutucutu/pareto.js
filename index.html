@@ -8,94 +8,97 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/custom.css">
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">
-        <a class="logo" href="#">
-          <img src="logo2.png" alt="">
-          <span>pareto.js</span>
-        </a>
-      </h1>
-      <h2 class="project-tagline">A trully functional small utility library that only has what you really need.</h2>
+      <h1 class="project-name">Pareto.js</h1>
+      <h2 class="project-tagline">An extremely small, intuitive and fast functional utility library for JavaScript</h2>
       <a href="https://github.com/concretesolutions/pareto.js" class="btn">View on GitHub</a>
       <a href="https://github.com/concretesolutions/pareto.js/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/concretesolutions/pareto.js/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
+      <h1>
+<a id="paretojs" class="anchor" href="#paretojs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>pareto.js</h1>
 
-      <h3>Advantages</h3>
+<h3>
+<a id="an-extremely-small-intuitive-and-fast-functional-utility-library-for-javascript" class="anchor" href="#an-extremely-small-intuitive-and-fast-functional-utility-library-for-javascript" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>An extremely small, intuitive and fast functional utility library for JavaScript</h3>
 
-      <ol>
-        <li>Lightweight</li>
-        <li>Functional</li>
-        <ul>
-          <li>Only pure functions</li>
-          <li>No side-effects</li>
-          <li>Encourages immutability</li>
-          <li>Auto-curried methods</li>
-        </ul>
-        <li>Better and smaller API</li>
-        <li>Made with the newest stuff:</li>
-        <ul>
-          <li>ES6</li>
-          <li>Babel</li>
-          <li>Webpack</li>
-        </ul>
-      </ol>
+<ul>
+<li>Only 15 core functions</li>
+<li>Written in ES2015</li>
+<li>Encourages immutability</li>
+<li>Only <a href="https://en.wikipedia.org/wiki/Pure_function">pure functions</a> (no side-effects)</li>
+<li>Smaller than <a href="https://github.com/lodash/lodash">lodash</a>
+</li>
+</ul>
 
-      <h3>Installation</h3>
+<p><a href="https://travis-ci.org/concretesolutions/pareto.js"><img src="https://img.shields.io/travis/concretesolutions/pareto.js/master.svg" alt="build"></a>
+<a href="https://codeclimate.com/github/concretesolutions/pareto.js"><img src="https://codeclimate.com/github/concretesolutions/pareto.js/badges/gpa.svg" alt="code climate"></a>
+<a href="https://codeclimate.com/github/concretesolutions/pareto.js/coverage"><img src="https://codeclimate.com/github/concretesolutions/pareto.js/badges/coverage.svg" alt="test coverage"></a>
+<a href="https://www.npmjs.com/package/paretojs"><img src="https://img.shields.io/npm/dm/paretojs.svg" alt="downloads"></a>
+<a href="https://www.npmjs.com/package/paretojs"><img src="https://img.shields.io/npm/v/paretojs.svg" alt="npm"></a></p>
 
-        <p>To install the stable version:</p>
-        <code>
-          npm install --save paretojs
-        </code>
-        <p>This assumes that you’re using <a href="https://www.npmjs.com/" target="_blank">npm</a> with a module bundler like <a href="http://webpack.github.io/" target="_blank">Webpack</a></p>
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h2>
 
-      <h3>How</h3>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> { <span class="pl-smi">flatten</span>, <span class="pl-smi">tail</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>paretojs<span class="pl-pds">'</span></span>
 
-        <p>Import pareto.js</p>
+<span class="pl-en">flatten</span>([<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, [<span class="pl-c1">3</span>, <span class="pl-c1">4</span>], <span class="pl-c1">5</span>]) <span class="pl-c">// [1, 2, 3, 4, 5]</span>
+<span class="pl-en">tail</span>([<span class="pl-c1">1</span>, <span class="pl-c1">2</span>, <span class="pl-c1">3</span>]) <span class="pl-c">// [2, 3] </span></pre></div>
 
-        <p>ES6:</p>
-        <code>
-          import * as _ from 'paretojs'
-        </code>
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
-        <p>or</p>
-        <code>import { remove } from 'paretojs'</code>
+<p>To install the stable version:</p>
 
-        <p>ES5 (CommonJS):</p>
-        <code>
-          var _ = require('paretojs');
-        </code>
+<pre><code>npm install --save paretojs
+</code></pre>
 
-        <p>ES5 (UMD):</p>
-        <code>
-          script src="node_modules/paretojs/dist/pareto.min.js"
-        </code>
+<p>This assumes that you’re using <a href="https://www.npmjs.com/">npm</a> with a module bundler like <a href="http://webpack.github.io">Webpack</a></p>
 
-        <p>And use it:</p>
-        <code>
-          _.remove([1, 2 , 3], 2) // [1, 3]
-        </code>
+<h2>
+<a id="how" class="anchor" href="#how" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How</h2>
 
-      <h3>Docs</h3>
+<p><strong>ES2015 or TypeScript:</strong></p>
 
-      <ul>
-        <li><a href="https://github.com/concretesolutions/pareto.js/blob/master/API.md" target="_blank">API Reference</a></li>
-        <li><a href="https://github.com/concretesolutions/pareto.js/blob/master/CONTRIBUTING.md" target="_blank">Contributing</a></li>
-        <li><a href="https://github.com/concretesolutions/pareto.js/blob/master/LICENSE.md" target="_blank">License</a></li>
-        <li><a href="http://www.concretesolutions.com.br/pareto.js/" target="_blank">Website</a></li>
-      </ul>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">_</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>paretojs<span class="pl-pds">'</span></span></pre></div>
+
+<p>or</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> { <span class="pl-smi">head</span>, <span class="pl-smi">tail</span> } <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>paretojs<span class="pl-pds">'</span></span></pre></div>
+
+<p><strong>CommonJS:</strong></p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> _ <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>paretojs<span class="pl-pds">'</span></span>);</pre></div>
+
+<p>or </p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> head <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>paretojs<span class="pl-pds">'</span></span>).<span class="pl-smi">head</span>;
+<span class="pl-k">var</span> tail <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>paretojs<span class="pl-pds">'</span></span>).<span class="pl-smi">tail</span>;</pre></div>
+
+<p><strong>UMD:</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>node_modules/paretojs/dist/index.umd.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="docs" class="anchor" href="#docs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Docs</h2>
+
+<ul>
+<li><a href="https://github.com/concretesolutions/pareto.js/blob/master/API.md">API Reference</a></li>
+<li><a href="https://github.com/concretesolutions/pareto.js/blob/master/CONTRIBUTING.md">Contributing</a></li>
+<li><a href="https://github.com/concretesolutions/pareto.js/blob/master/LICENSE.md">License</a></li>
+</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/concretesolutions/pareto.js">Pareto.js</a> is maintained by <a href="https://github.com/concretesolutions">concretesolutions</a>.</span>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
 
     </section>
+
+  
   </body>
 </html>
