@@ -1,6 +1,12 @@
 # pareto.js
 
-###### A trully functional small utility library that only has what you really need.
+#### An extremely small, intuitive and fast functional utility library for JavaScript
+
+- Only 15 core operators and factories
+- Only pure functions (no side-effects)
+- Written in ES2015
+- Encourages immutability
+- Smaller than lodash
 
 [![build](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg)](https://travis-ci.org/concretesolutions/pareto.js)
 [![code climate](https://codeclimate.com/github/concretesolutions/pareto.js/badges/gpa.svg)](https://codeclimate.com/github/concretesolutions/pareto.js)
@@ -8,24 +14,14 @@
 [![downloads](https://img.shields.io/npm/dm/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 [![npm](https://img.shields.io/npm/v/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 
-![Vilfredo Pareto](https://upload.wikimedia.org/wikipedia/commons/9/99/Vilfredo_Pareto.jpg)
+### Example
 
-### Advantages
+```js
+import { flatten, tail } from 'paretojs'
 
-1. Lightweight
-
-2. Functional
- * Only pure functions
- * No side-effects
- * Encourages immutability
-
-3. Better and smaller API
-
-4. Made with the newest stuff:
- * ES6
- * Babel
- * Webpack
-
+flatten([1, 2, [3, 4], 5]) // [1, 2, 3, 4, 5]
+tail([1, 2, 3]) // [2, 3] 
+```
 ### Installation
 
 To install the stable version:
@@ -40,7 +36,7 @@ This assumes that you’re using [npm](https://www.npmjs.com/) with a module bun
 
 Import pareto.js
 
-ES6:
+ES2015 or TypeScript:
 
 ```js
 import _ from 'paretojs'
@@ -52,7 +48,7 @@ or
 import { head, tail } from 'paretojs'
 ```
 
-ES5 (CommonJS):
+CommonJS:
 
 ```js
 var _ = require('paretojs');
@@ -69,12 +65,6 @@ ES5 (UMD):
 
 ```html
 <script src="node_modules/paretojs/dist/index.umd.min.js"></script>
-```
-
-And use it:
-
-```js
-_.remove([1, 2 , 3], 2) // [1, 3]
 ```
 
 ### Docs

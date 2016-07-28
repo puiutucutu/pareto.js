@@ -1,7 +1,7 @@
 {
   "name": "paretojs",
-  "version": "2.0.4",
-  "description": "A trully small functional utility library that only has what you really need.",
+  "version": "2.0.5",
+  "description": "An extremely small, intuitive and fast functional utility library for JavaScript",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha test/**/*.spec.js --compilers js:babel-register",
