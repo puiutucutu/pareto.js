@@ -34,9 +34,7 @@ This assumes that you’re using [npm](https://www.npmjs.com/) with a module bun
 
 ### How
 
-Import pareto.js
-
-ES2015 or TypeScript:
+**ES2015 or TypeScript:**
 
 ```js
 import _ from 'paretojs'
@@ -48,7 +46,7 @@ or
 import { head, tail } from 'paretojs'
 ```
 
-CommonJS:
+**CommonJS:**
 
 ```js
 var _ = require('paretojs');
@@ -61,7 +59,7 @@ var head = require('paretojs').head;
 var tail = require('paretojs').tail;
 ```
 
-ES5 (UMD):
+**UMD:**
 
 ```html
 <script src="node_modules/paretojs/dist/index.umd.min.js"></script>
