@@ -14,7 +14,7 @@
 [![downloads](https://img.shields.io/npm/dm/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 [![npm](https://img.shields.io/npm/v/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 
-### Example
+## Example
 
 ```js
 import { flatten, tail } from 'paretojs'
@@ -22,7 +22,7 @@ import { flatten, tail } from 'paretojs'
 flatten([1, 2, [3, 4], 5]) // [1, 2, 3, 4, 5]
 tail([1, 2, 3]) // [2, 3] 
 ```
-### Installation
+## Installation
 
 To install the stable version:
 
@@ -32,7 +32,7 @@ npm install --save paretojs
 
 This assumes that you’re using [npm](https://www.npmjs.com/) with a module bundler like [Webpack](http://webpack.github.io)
 
-### How
+## How
 
 **ES2015 or TypeScript:**
 
@@ -65,7 +65,7 @@ var tail = require('paretojs').tail;
 <script src="node_modules/paretojs/dist/index.umd.min.js"></script>
 ```
 
-### Docs
+## Docs
 
 * [API Reference](https://github.com/concretesolutions/pareto.js/blob/master/API.md)
 * [Contributing](https://github.com/concretesolutions/pareto.js/blob/master/CONTRIBUTING.md)
