@@ -1,12 +1,12 @@
 # pareto.js
 
-#### An extremely small, intuitive and fast functional utility library for JavaScript
+## An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 15 core operators and factories
-- Only pure functions (no side-effects)
+- Only 15 core functions
 - Written in ES2015
 - Encourages immutability
-- Smaller than lodash
+- Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
+- Smaller than [lodash](https://github.com/lodash/lodash)
 
 [![build](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg)](https://travis-ci.org/concretesolutions/pareto.js)
 [![code climate](https://codeclimate.com/github/concretesolutions/pareto.js/badges/gpa.svg)](https://codeclimate.com/github/concretesolutions/pareto.js)
