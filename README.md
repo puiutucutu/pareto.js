@@ -4,6 +4,8 @@
 
 [![build](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg?style=flat-square)](https://travis-ci.org/concretesolutions/pareto.js)
 [![npm](https://img.shields.io/npm/v/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
+[![code climate](https://codeclimate.com/github/concretesolutions/pareto.js/badges/gpa.svg?style=flat-square)](https://codeclimate.com/github/concretesolutions/pareto.js)
+[![test coverage](https://codeclimate.com/github/concretesolutions/pareto.js/badges/coverage.svg?style=flat-square)](https://codeclimate.com/github/concretesolutions/pareto.js/coverage)
 [![downloads](https://img.shields.io/npm/dm/paretojs.svg?style=flat-square)](https://www.npmjs.com/package/paretojs)
 
 ### Advantages
