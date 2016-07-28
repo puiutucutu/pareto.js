@@ -1,6 +1,6 @@
 # pareto.js
 
-## An extremely small, intuitive and fast functional utility library for JavaScript
+### An extremely small, intuitive and fast functional utility library for JavaScript
 
 - Only 15 core functions
 - Written in ES2015
