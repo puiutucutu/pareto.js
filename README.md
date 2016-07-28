@@ -8,6 +8,8 @@
 [![downloads](https://img.shields.io/npm/dm/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 [![npm](https://img.shields.io/npm/v/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 
+![Vilfredo Pareto](https://upload.wikimedia.org/wikipedia/commons/9/99/Vilfredo_Pareto.jpg)
+
 ### Advantages
 
 1. Lightweight
