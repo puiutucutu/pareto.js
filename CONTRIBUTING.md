@@ -1,31 +1,14 @@
-### Contributing
+# Contributing
 
-Fork, then clone the repository:
+To contribute to the project, please follow these steps:
 
-```
-git clone https://github.com/<your-username>/pareto.js.git
-```
-
-Install mocha:
-
-```
-npm install -g mocha
-```
-
-Download the dependencies:
-
-```
-npm install
-```
-
-Run the tests (with coverage):
-
-```
-npm run test
-```
-
-Run the tests (without coverage):
-
-```
-npm run test-unit
-```
+1. Fork the repo
+2. Make a branch for your change
+3. Run `npm install`
+4. Make your changes
+5. Run `npm test`
+6. Test your changes
+7. Run `git add -A` to add your changes (please don't add any changes to the `dist` directory).
+8. Run `npm run commit` (**Do not** use `git commit`) - follow the prompts to create your git message
+9. Push your changes with `git push`
+10. Create a Pull Request
