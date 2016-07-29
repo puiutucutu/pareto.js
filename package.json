@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "An extremely small, intuitive and fast functional utility library for JavaScript",
   "main": "dist/index.js",
   "scripts": {
