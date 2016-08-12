@@ -2,7 +2,7 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 15 core functions
+- Only 16 core functions
 - Written in ES2015
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
@@ -20,7 +20,7 @@
 import { flatten, tail } from 'paretojs'
 
 flatten([1, 2, [3, 4], 5]) // [1, 2, 3, 4, 5]
-tail([1, 2, 3]) // [2, 3] 
+tail([1, 2, 3]) // [2, 3]
 ```
 ## Installation
 
@@ -52,7 +52,7 @@ import { head, tail } from 'paretojs'
 var _ = require('paretojs');
 ```
 
-or 
+or
 
 ```js
 var head = require('paretojs').head;

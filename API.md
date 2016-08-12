@@ -181,3 +181,14 @@ console.log(a) // 2, the first call will execute immediately
 console.log(a) // 3, after 500ms
 console.log(a) // 4, after 1000ms
 ```
+
+**pipe** : ```_.pipe(fns) -> fn```
+
+Creates and returns a new function that performs a left-to-right function composition.
+```js
+const increment = x => x + 1
+const decrement = x => x - 1
+
+const piped = pipe(increment, increment, decrement)
+piped(0) // 1
+```

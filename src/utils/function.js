@@ -43,3 +43,5 @@ export const throttle = (fn, limit) => {
     }
   }
 }
+
+export const pipe = (...fns) => initial => fns.reduce((acc, fn) => fn(acc), initial)

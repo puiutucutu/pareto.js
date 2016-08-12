@@ -3,7 +3,7 @@ import {
 } from './utils/array'
 
 import {
-  curry, compose, memoize, debounce, throttle,
+  curry, compose, memoize, debounce, throttle, pipe
 } from './utils/function'
 
 import {
@@ -23,6 +23,7 @@ export {
   memoize,
   debounce,
   throttle,
+  pipe,
   equals,
   matches,
   isEmpty
