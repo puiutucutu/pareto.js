@@ -12,7 +12,7 @@ _.head([1, 2, 3]) // 1
 
 **tail** : ```_.tail(array)```
 
-Gets all but the first element of an array.
+Gets all, except the first element of an array.
 
 ```js
 _.tail([1, 2, 3]) // [2, 3]
