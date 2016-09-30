@@ -55,3 +55,14 @@ export const remove = (array, props) => {
 
   return (index > -1) ? [...array.slice(0, index), ...array.slice(index + 1)] : array
 }
+
+export const chunk = (array, len) => {
+  const chunks = [], n = array.length
+  let i = 0
+
+  while (i < n) {
+    chunks.push(array.slice(i, i += len))
+  }
+
+  return chunks
+}

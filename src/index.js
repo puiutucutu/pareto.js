@@ -1,5 +1,5 @@
 import {
-  head, tail, last, flatten, remove, indexOf, where
+  head, tail, last, flatten, remove, indexOf, where, chunk
 } from './utils/array'
 
 import {
@@ -18,6 +18,7 @@ export {
   remove,
   indexOf,
   where,
+  chunk,
   curry,
   compose,
   memoize,

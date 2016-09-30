@@ -1,7 +1,7 @@
 import expect from 'expect'
 
 import {
-  isEmpty, isEqual, head, findIndexByObject, tail, last, flatten, remove, indexOf, where
+  isEmpty, isEqual, head, findIndexByObject, tail, last, flatten, remove, indexOf, where, chunk
 } from '../src/utils/array'
 
 describe('array', () => {
@@ -100,6 +100,16 @@ describe('array', () => {
       expect(indexOf(array, { id: 3 })).toBe(-1)
       expect(indexOf(array, { id: 1 })).toBe(0)
       expect(indexOf(array, { id: 1, name: 'name1' })).toBe(0)
+    })
+  })
+
+  describe('chunk', () => {
+    it('returns the chunk of an array', () => {
+      expect(chunk([1,2,3], 2)[0]).toEqual([1,2])
+      expect(chunk([1,2,3], 2)[1]).toEqual([3])
+      expect(chunk([1,2,3,4,5,6,7], 3)[0]).toEqual([1,2,3])
+      expect(chunk([1,2,3,4,5,6,7], 3)[1]).toEqual([4,5,6])
+      expect(chunk([1,2,3,4,5,6,7], 3)[2]).toEqual([7])
     })
   })
 })

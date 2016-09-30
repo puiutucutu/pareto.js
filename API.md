@@ -74,6 +74,14 @@ _.isEmpty([]) // true
 _.isEmpty(['one']) // false
 ```
 
+**chunk** : ```_.chunk(array, n)```
+
+Returns the chunk of an array based on an integer n
+
+```js
+_.chunk([1,2,3,4,5,6,7], 3) // [ [1,2,3], [4,5,6], [7] ]
+```
+
 ###### Object
 
 **equals** : ```_.equals(object1, object2)```
