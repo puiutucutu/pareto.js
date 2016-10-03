@@ -1,12 +1,8 @@
 {
   "name": "paretojs",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "An extremely small, intuitive and fast functional utility library for JavaScript",
   "main": "dist/index.js",
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "scripts": {
     "test": "mocha test/**/*.spec.js --compilers js:babel-register",
     "test:watch": "npm t -- --watch",
