@@ -62,7 +62,7 @@ var tail = require('paretojs').tail;
 **UMD:**
 
 ```html
-<script src="node_modules/paretojs/dist/index.umd.min.js"></script>
+<script src="https://unpkg.com/paretojs/dist/index.umd.min.js"></script>
 ```
 
 ## Docs
