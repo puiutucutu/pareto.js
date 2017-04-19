@@ -3,9 +3,10 @@
   "version": "3.0.0",
   "description": "An extremely small, intuitive and fast functional utility library for JavaScript",
   "scripts": {
-    "compile": "tsc",
+    "compile": "tsc --pretty",
     "lint": "tslint -c tslint.json src/**/*.ts src/extra/*.ts",
-    "test": "jest"
+    "test": "jest",
+    "check": "npm run compile && npm run lint && npm run test"
   },
   "keywords": [
     "util",

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "inlineSources": true,
     "module": "commonjs",
-    "allowJs": false,
+    "allowJs": true,
     "noImplicitAny": true,
     "removeComments": false,
     "sourceMap": true,
@@ -10,6 +10,12 @@
     "outDir": "./ts"
   },
   "files": [
-    "src/index.ts"
+    "src/index.ts",
+    "src/extra/chunk.ts",
+    "src/extra/compose.ts",
+    "src/extra/curry.ts",
+    "src/extra/flatten.ts",
+    "src/extra/head.ts",
+    "src/extra/tail.ts"
   ]
 }

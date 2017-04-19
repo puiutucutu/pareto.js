@@ -1,0 +1,1 @@
+{"version":3,"file":"tail.js","sourceRoot":"","sources":["../../../src/extra/tail.ts"],"names":[],"mappings":";;AAAA,cAA6B,KAAiB;IAC5C,MAAM,CAAC,KAAK,CAAC,KAAK,CAAC,CAAC,EAAE,KAAK,CAAC,MAAM,CAAC,CAAC;AACtC,CAAC;AAFD,uBAEC","sourcesContent":["export default function tail(array: Array<any>): Array<any> {\n  return array.slice(1, array.length);\n}\n"]}
