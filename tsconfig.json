@@ -2,7 +2,7 @@
   "compilerOptions": {
     "inlineSources": true,
     "module": "commonjs",
-    "allowJs": true,
+    "allowJs": false,
     "noImplicitAny": true,
     "removeComments": false,
     "sourceMap": true,
