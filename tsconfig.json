@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "inlineSources": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES5",
+    "outDir": "./ts"
+  },
+  "files": [
+    "src/index.ts"
+  ]
+}

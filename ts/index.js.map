@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":";;AAAA,IAAM,IAAI,GAAG,UAAC,KAAiB,IAAK,OAAA,KAAK,CAAC,CAAC,CAAC,EAAR,CAAQ,CAAC;AAG3C,oBAAI","sourcesContent":["const head = (array: Array<any>) => array[0];\n\nexport {\n  head,\n}\n"]}
