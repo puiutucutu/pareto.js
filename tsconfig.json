@@ -16,7 +16,6 @@
     "src/extra/curry.ts",
     "src/extra/debounce.ts",
     "src/extra/flatten.ts",
-    "src/extra/head.ts",
     "src/extra/pipe.ts",
     "src/extra/tail.ts"
   ],
