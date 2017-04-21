@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "inlineSources": true,
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES5",
+    "outDir": "./"
+  },
+  "files": [
+    "src/index.ts",
+    "src/extra/chunk.ts",
+    "src/extra/compose.ts",
+    "src/extra/curry.ts",
+    "src/extra/debounce.ts",
+    "src/extra/flatten.ts",
+    "src/extra/pipe.ts",
+    "src/extra/tail.ts"
+  ],
+  "filesGlob": [
+    "typings/index.d.ts",
+    "src/**/*.ts"
+  ]
+}

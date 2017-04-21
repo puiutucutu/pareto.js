@@ -1,7 +1,0 @@
-*.log
-node_modules
-typings
-coverage
-src
-test
-webpack.config.babel.js
