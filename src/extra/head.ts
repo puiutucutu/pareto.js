@@ -1,3 +1,3 @@
-export default function head(array: Array<any>): any {
+export default function head<T>(array: Array<T>): T {
   return array[0];
 }
