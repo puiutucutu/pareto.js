@@ -8,6 +8,8 @@
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
 - Smaller than [lodash](https://github.com/lodash/lodash)
 
+![](http://img.badgesize.io/concretesolutions/pareto.js/master/dist/paretojs.min.js)
+![](http://img.badgesize.io/concretesolutions/pareto.js/master/dist/paretojs.min.js?compression=gzip)
 [![build](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg)](https://travis-ci.org/concretesolutions/pareto.js)
 [![downloads](https://img.shields.io/npm/dm/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 [![npm](https://img.shields.io/npm/v/paretojs.svg)](https://www.npmjs.com/package/paretojs)
