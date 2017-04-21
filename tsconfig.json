@@ -2,12 +2,12 @@
   "compilerOptions": {
     "inlineSources": true,
     "module": "commonjs",
-    "allowJs": false,
+    "declaration": true,
     "noImplicitAny": true,
     "removeComments": false,
     "sourceMap": true,
     "target": "ES5",
-    "outDir": "./ts"
+    "outDir": "./"
   },
   "files": [
     "src/index.ts",
@@ -19,5 +19,9 @@
     "src/extra/head.ts",
     "src/extra/pipe.ts",
     "src/extra/tail.ts"
+  ],
+  "filesGlob": [
+    "typings/index.d.ts",
+    "src/**/*.ts"
   ]
 }

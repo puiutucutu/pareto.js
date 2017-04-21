@@ -5,6 +5,7 @@
   "main": "dist/pareto.cjs.js",
   "jsnext:main": "dist/pareto.es.js",
   "module": "dist/pareto.es.js",
+  "typings": "index.d.ts",
   "scripts": {
     "compile": "tsc --pretty",
     "lint": "tslint -c tslint.json src/**/*.ts src/extra/*.ts",

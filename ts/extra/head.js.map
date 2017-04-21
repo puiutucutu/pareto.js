@@ -1,1 +1,0 @@
-{"version":3,"file":"head.js","sourceRoot":"","sources":["../../src/extra/head.ts"],"names":[],"mappings":";;AAAA,cAAgC,KAAe;IAC7C,MAAM,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AAClB,CAAC;AAFD,uBAEC","sourcesContent":["export default function head<T>(array: Array<T>): T {\n  return array[0];\n}\n"]}
