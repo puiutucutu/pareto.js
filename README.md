@@ -142,13 +142,13 @@ const piped = pipe(increment, increment, decrement)
 piped(0) // 1
 ```
 
+## Misc
+
+If you want to add a new function, please open an issue and explain why.
+
 ## Docs
 
 * [Contributing](https://github.com/concretesolutions/pareto.js/blob/master/CONTRIBUTING.md)
 * [Changelog](https://github.com/concretesolutions/pareto.js/blob/master/CHANGELOG.md)
 * [Code of Conduct](https://github.com/concretesolutions/pareto.js/blob/master/CODE_OF_CONDUCT.md)
 * [License](https://github.com/concretesolutions/pareto.js/blob/master/LICENSE.md)
-
-## Misc
-
-If you want to add a new function, please open an issue and explain why.
