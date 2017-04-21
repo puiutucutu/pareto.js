@@ -2,15 +2,13 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 17 core functions
+- Only 8 core functions
 - Written in ES2015
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
 - Smaller than [lodash](https://github.com/lodash/lodash)
 
 [![build](https://img.shields.io/travis/concretesolutions/pareto.js/master.svg)](https://travis-ci.org/concretesolutions/pareto.js)
-[![code climate](https://codeclimate.com/github/concretesolutions/pareto.js/badges/gpa.svg)](https://codeclimate.com/github/concretesolutions/pareto.js)
-[![test coverage](https://codeclimate.com/github/concretesolutions/pareto.js/badges/coverage.svg)](https://codeclimate.com/github/concretesolutions/pareto.js/coverage)
 [![downloads](https://img.shields.io/npm/dm/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 [![npm](https://img.shields.io/npm/v/paretojs.svg)](https://www.npmjs.com/package/paretojs)
 
@@ -62,7 +60,7 @@ var tail = require('paretojs').tail;
 **UMD:**
 
 ```html
-<script src="https://unpkg.com/paretojs/dist/index.umd.min.js"></script>
+<script src="https://unpkg.com/paretojs/dist/paretojs.min.js"></script>
 ```
 
 ## Docs

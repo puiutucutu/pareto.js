@@ -5,3 +5,4 @@ dist
 .opt-in
 .opt-out
 typings/*.js
+ts
