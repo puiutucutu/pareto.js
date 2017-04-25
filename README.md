@@ -67,81 +67,95 @@ var debounce = require('paretojs').debounce;
 
 ## API
 
-**tail** : ```_.tail(array)```
+**tail** : ```tail(array)```
 
 Gets all, except the first element of an array.
 
 ```js
-_.tail([1, 2, 3]) // [2, 3]
+import { tail } from 'paretojs';
+
+tail([1, 2, 3]); // [2, 3]
 ```
 
-**flatten** : ```_.flatten(array)```
+**flatten** : ```flatten(array)```
 
 Flattens (recursively) an array
 
 ```js
-_.flatten([1, [2, 3], 4]) // [1, 2, 3, 4]
+import { flatten } from 'paretojs';
+
+flatten([1, [2, 3], 4]); // [1, 2, 3, 4]
 ```
 
-**chunk** : ```_.chunk(array, n)```
+**chunk** : ```chunk(array, n)```
 
 Returns the chunk of an array based on an integer n
 
 ```js
-_.chunk([1,2,3,4,5,6,7], 3) // [ [1,2,3], [4,5,6], [7] ]
+import { chunk } from 'paretojs';
+
+chunk([1,2,3,4,5,6,7], 3); // [ [1,2,3], [4,5,6], [7] ]
 ```
 
-**curry** : ```_.curry(args)```
+**curry** : ```curry(args)```
 
 Gets a curried function
 
 ```js
-const add = (x, y) => x + y
+import { curry } from 'paretojs';
 
-_.curry(add, 1, 2) // 3
-_.curry(add)(1)(2) // 3
-_.curry(add)(1, 2) // 3
-_.curry(add, 1)(2) // 3
+const add = (x, y) => x + y;
+
+curry(add, 1, 2); // 3
+curry(add)(1)(2); // 3
+curry(add)(1, 2); // 3
+curry(add, 1)(2); // 3
 ```
 
-**compose** : ```_.compose(f1, f2, ..., fn)```
+**compose** : ```compose(f1, f2, ..., fn)```
 
 Gets a composed function
 
 ```js
-const toUpperCase = x => x.toUpperCase()
-const exclaim = x => x + '!!!'
+import { compose } from 'paretojs';
 
-const angry = _.compose(toUpperCase, exclaim)
+const toUpperCase = x => x.toUpperCase();
+const exclaim = x => x + '!!!';
 
-angry('stop') // 'STOP!!!
+const angry = compose(toUpperCase, exclaim);
+
+angry('stop'); // 'STOP!!!
 ```
 
-**debounce** : ```_.debounce(fn, time)```
+**debounce** : ```debounce(fn, time)```
 
 Creates and returns a new debounced version of the passed function which will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.
 
 ```js
-let a = 1
-const fn = () => a = 42
+import { debounce } from 'paretojs';
 
-const debounce = _.debounce(fn, 500)
-debounce()
+let a = 1;
+const fn = () => a = 42;
 
-console.log(a) // 1 before 500ms
+const debounce = debounce(fn, 500);
+debounce();
 
-console.log(a) // 42 after 500ms
+console.log(a); // 1 before 500ms
+
+console.log(a); // 42 after 500ms
 ```
 
-**pipe** : ```_.pipe(fns) -> fn```
+**pipe** : ```pipe(fns) -> fn```
 
 Creates and returns a new function that performs a left-to-right function composition.
 ```js
-const increment = x => x + 1
-const decrement = x => x - 1
+import { pipe } from 'paretojs';
 
-const piped = pipe(increment, increment, decrement)
-piped(0) // 1
+const increment = x => x + 1;
+const decrement = x => x - 1;
+
+const piped = pipe(increment, increment, decrement);
+piped(0); // 1
 ```
 
 ## Misc
