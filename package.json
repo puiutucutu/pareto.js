@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "An extremely small, intuitive and fast functional utility library for JavaScript",
   "main": "dist/pareto.cjs.js",
   "jsnext:main": "dist/pareto.es.js",
@@ -13,9 +13,9 @@
     "check": "npm run compile && npm run lint && npm run test",
     "clean": "rimraf dist coverage",
     "prebuild": "npm run check && npm run clean",
-    "build:umd": "rollup --config rollup.config.umd.js",
-    "build:cjs": "rollup --config rollup.config.cjs.js",
-    "build:es": "rollup --config rollup.config.es.js",
+    "build:umd": "rollup --config rollup.config.js",
+    "build:cjs": "rollup --config rollup.config.js",
+    "build:es": "rollup --config rollup.config.js",
     "build": "npm run build:umd && npm run build:cjs && npm run build:es"
   },
   "keywords": [
