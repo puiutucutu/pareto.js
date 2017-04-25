@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.0.2
+- Refactoring Rollup build
+
+### 3.0.1
+- Adding Yarn
+
 ### 3.0.0
 - Adding TypeScript (removing ES2015)
 - Adding Jest (removing Mocha)
