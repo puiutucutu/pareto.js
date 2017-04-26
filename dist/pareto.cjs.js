@@ -64,6 +64,18 @@ function flatten(array) {
     return array.reduce(function (a, b) { return a.concat(Array.isArray(b) ? flatten(b) : b); }, []);
 }
 
+function memoize(fn) {
+    var memo = {};
+    var slice = Array.prototype.slice;
+    return function () {
+        var args = slice.call(arguments);
+        if (args in memo) {
+            return memo[args];
+        }
+        return (memo[args] = fn.apply(this, args));
+    };
+}
+
 var pipe = function () {
     var fns = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -81,5 +93,6 @@ exports.compose = compose;
 exports.curry = curry;
 exports.debounce = debounce;
 exports.flatten = flatten;
+exports.memoize = memoize;
 exports.pipe = pipe;
 exports.tail = tail;

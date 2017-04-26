@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.1.0
+- Adding memoize function
+
 ### 3.0.2
 - Refactoring Rollup build
 

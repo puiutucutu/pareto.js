@@ -2,7 +2,7 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 7 core functions
+- Only 8 core functions
 - Written in TypeScript
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
@@ -156,6 +156,28 @@ const decrement = x => x - 1;
 
 const piped = pipe(increment, increment, decrement);
 piped(0); // 1
+```
+
+**memoize** : ```memoize(fn)```
+
+Creates a function that memoizes (caches) the result
+```js
+import { memoize } from 'paretojs';
+
+let count = 0;
+
+const square = x => {
+  count = count + 1;
+  return x * x;
+};
+
+const memoSquare = memoize(square);
+
+count; // 0
+memoSquare(10); // 100
+memoSquare(10); // 100
+memoSquare(10); // 100
+count; // 1
 ```
 
 ## Misc
