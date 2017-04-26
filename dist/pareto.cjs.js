@@ -64,6 +64,10 @@ function flatten(array) {
     return array.reduce(function (a, b) { return a.concat(Array.isArray(b) ? flatten(b) : b); }, []);
 }
 
+function matches(obj, props) {
+    return Object.keys(props).every(function (key) { return obj[key] === props[key]; });
+}
+
 function memoize(fn) {
     var memo = {};
     var slice = Array.prototype.slice;
@@ -93,6 +97,7 @@ exports.compose = compose;
 exports.curry = curry;
 exports.debounce = debounce;
 exports.flatten = flatten;
+exports.matches = matches;
 exports.memoize = memoize;
 exports.pipe = pipe;
 exports.tail = tail;
