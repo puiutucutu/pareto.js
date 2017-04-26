@@ -2,7 +2,7 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 8 core functions
+- Only 9 core functions
 - Written in TypeScript
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
@@ -178,6 +178,20 @@ memoSquare(10); // 100
 memoSquare(10); // 100
 memoSquare(10); // 100
 count; // 1
+```
+
+**matches** : ```matches(object, props)```
+
+Checks if an objects matches with some properties
+
+```js
+import { matches } from 'paretojs';
+
+const object1 = { a: 1, b: 2 };
+
+matches(object1, { a: 1 }); // true
+matches(object1, { a: 1, b: 2 }); // true
+matches(object1, { a: 3 }); // false
 ```
 
 ## Misc

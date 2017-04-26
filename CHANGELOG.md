@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.2.0
+- Adding matches function
+
 ### 3.1.0
 - Adding memoize function
 
