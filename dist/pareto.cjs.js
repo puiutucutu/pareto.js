@@ -6,7 +6,7 @@ function chunks(array, len) {
     var chunks = [], n = array.length;
     var i = 0;
     while (i < n) {
-        chunks.push(array.slice(i, i += len));
+        chunks.push(array.slice(i, (i += len)));
     }
     return chunks;
 }
@@ -85,7 +85,9 @@ var pipe = function () {
     for (var _i = 0; _i < arguments.length; _i++) {
         fns[_i - 0] = arguments[_i];
     }
-    return function (initial) { return fns.reduce(function (acc, fn) { return fn(acc); }, initial); };
+    return function (initial) {
+        return fns.reduce(function (acc, fn) { return fn(acc); }, initial);
+    };
 };
 
 function tail(array) {

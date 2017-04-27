@@ -2,7 +2,7 @@ export default function memoize(fn: Function) {
   const memo: any = {};
   const slice = Array.prototype.slice;
 
-  return function () {
+  return function() {
     const args = slice.call(arguments);
 
     if (args in memo) {

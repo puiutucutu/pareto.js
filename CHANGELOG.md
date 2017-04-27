@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.2.1
+- Adding prettier (automatic code formatter)
+
 ### 3.2.0
 - Adding matches function
 
