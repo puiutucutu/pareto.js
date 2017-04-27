@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "An extremely small, intuitive and fast functional utility library for JavaScript",
   "main": "dist/pareto.cjs.js",
   "jsnext:main": "dist/pareto.es.js",
@@ -10,9 +10,10 @@
     "compile": "tsc --pretty",
     "lint": "tslint -c tslint.json src/**/*.ts src/extra/*.ts",
     "test": "jest",
+    "format": "prettier --write '{src,__tests__}/**/*.ts'",
     "check": "npm run compile && npm run lint && npm run test",
     "clean": "rimraf dist coverage",
-    "prebuild": "npm run check && npm run clean",
+    "prebuild": "npm run format && npm run check && npm run clean",
     "build:umd": "rollup --config rollup.config.js",
     "build:cjs": "rollup --config rollup.config.js",
     "build:es": "rollup --config rollup.config.js",
@@ -51,6 +52,7 @@
   },
   "devDependencies": {
     "jest": "19.0.2",
+    "prettier": "1.2.2",
     "rimraf": "2.6.1",
     "rollup": "0.41.6",
     "rollup-plugin-commonjs": "8.0.2",

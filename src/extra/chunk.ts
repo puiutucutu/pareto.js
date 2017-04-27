@@ -3,7 +3,7 @@ export default function chunks(array: Array<any>, len: number): Array<any> {
   let i = 0;
 
   while (i < n) {
-    chunks.push(array.slice(i, i += len));
+    chunks.push(array.slice(i, (i += len)));
   }
 
   return chunks;

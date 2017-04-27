@@ -1,6 +1,6 @@
-import memoize from '../src/extra/memoize';
+import memoize from "../src/extra/memoize";
 
-it('memoizes functions', () => {
+it("memoizes functions", () => {
   let count = 0;
 
   const square = x => {
