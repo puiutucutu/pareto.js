@@ -1,5 +1,12 @@
 # Changelog
 
+### 3.3.1
+- Fixing signature of matches function
+- Fixing signature of sort function
+
+### 3.3.0
+- Adding sort function
+
 ### 3.2.1
 - Adding prettier (automatic code formatter)
 
