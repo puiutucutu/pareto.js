@@ -16,6 +16,7 @@
     "src/extra/compose.ts",
     "src/extra/curry.ts",
     "src/extra/debounce.ts",
+    "src/extra/deepCopy.ts",
     "src/extra/matches.ts",
     "src/extra/memoize.ts",
     "src/extra/flatten.ts",

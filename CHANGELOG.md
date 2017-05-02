@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.4.0
+- Adding deepCopy function
+
 ### 3.3.1
 - Fixing signature of matches function
 - Fixing signature of sort function
