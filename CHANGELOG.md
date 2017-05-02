@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.4.1
+- Fixing signature of chunk function
+- Fixing signature of flatten function
+
 ### 3.4.0
 - Adding deepCopy function
 
