@@ -90,6 +90,17 @@ var pipe = function () {
     };
 };
 
+function sort(collection, property) {
+    return collection.sort(function (a, b) {
+        if (a[property] === b[property])
+            return 0;
+        if (a[property] > b[property])
+            return 1;
+        if (a[property] < b[property])
+            return -1;
+    });
+}
+
 function tail(array) {
     return array.slice(1, array.length);
 }
@@ -102,4 +113,5 @@ exports.flatten = flatten;
 exports.matches = matches;
 exports.memoize = memoize;
 exports.pipe = pipe;
+exports.sort = sort;
 exports.tail = tail;

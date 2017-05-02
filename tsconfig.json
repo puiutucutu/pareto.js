@@ -19,6 +19,7 @@
     "src/extra/memoize.ts",
     "src/extra/flatten.ts",
     "src/extra/pipe.ts",
+    "src/extra/sort.ts",
     "src/extra/tail.ts"
   ],
   "filesGlob": [
