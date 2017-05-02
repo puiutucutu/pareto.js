@@ -1,5 +1,5 @@
-export default function chunks(array: Array<any>, len: number): Array<any> {
-  const chunks = [], n = array.length;
+export default function chunks<T>(array: Array<T>, len: number): Array<T> {
+  const chunks: Array<any> = [], n = array.length;
   let i = 0;
 
   while (i < n) {
