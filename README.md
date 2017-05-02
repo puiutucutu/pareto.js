@@ -2,7 +2,7 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 9 core functions
+- Only 10 core functions
 - Written in TypeScript
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
@@ -192,6 +192,25 @@ const object1 = { a: 1, b: 2 };
 matches(object1, { a: 1 }); // true
 matches(object1, { a: 1, b: 2 }); // true
 matches(object1, { a: 3 }); // false
+```
+
+**sort** : ```sort(collection, property)```
+
+Sorts a collection based on a property
+
+```js
+import { sort } from 'paretojs';
+
+const collection = [
+  {
+    id: 2,
+  },
+  {
+    id: 1,
+  },
+];
+
+sort(collection, 'id'); // [{ id: 1 }, { id: 2 }]
 ```
 
 ## Misc

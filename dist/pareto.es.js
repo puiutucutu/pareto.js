@@ -86,8 +86,19 @@ var pipe = function () {
     };
 };
 
+function sort(collection, property) {
+    return collection.sort(function (a, b) {
+        if (a[property] === b[property])
+            return 0;
+        if (a[property] > b[property])
+            return 1;
+        if (a[property] < b[property])
+            return -1;
+    });
+}
+
 function tail(array) {
     return array.slice(1, array.length);
 }
 
-export { chunks as chunk, compose, curry, debounce, flatten, matches, memoize, pipe, tail };
+export { chunks as chunk, compose, curry, debounce, flatten, matches, memoize, pipe, sort, tail };

@@ -6,6 +6,7 @@ import flatten from "./extra/flatten";
 import matches from "./extra/matches";
 import memoize from "./extra/memoize";
 import pipe from "./extra/pipe";
+import sort from "./extra/sort";
 import tail from "./extra/tail";
 
 export {
@@ -17,5 +18,6 @@ export {
   matches,
   memoize,
   pipe,
+  sort,
   tail
 };
