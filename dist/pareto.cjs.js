@@ -60,6 +60,10 @@ var debounce = function (fn, wait, immediate) {
     };
 };
 
+function deepCopy(object) {
+    return JSON.parse(JSON.stringify(object));
+}
+
 function flatten(array) {
     return array.reduce(function (a, b) { return a.concat(Array.isArray(b) ? flatten(b) : b); }, []);
 }
@@ -109,6 +113,7 @@ exports.chunk = chunks;
 exports.compose = compose;
 exports.curry = curry;
 exports.debounce = debounce;
+exports.deepCopy = deepCopy;
 exports.flatten = flatten;
 exports.matches = matches;
 exports.memoize = memoize;
