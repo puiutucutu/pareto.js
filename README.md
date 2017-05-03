@@ -2,7 +2,7 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 11 core functions
+- Only 12 core functions
 - Written in TypeScript
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
@@ -229,6 +229,20 @@ const object = {
 };
 
 deepCopy(object); // { a: 1, b: 2, c: { d: 3} }
+```
+
+**prop** : ```prop(property, object)```
+
+Gets the property of an object
+
+```js
+import { prop } from 'paretojs';
+
+const object = {
+  label: 'custom label',
+};
+
+prop('label', object); // custom label
 ```
 
 ## Misc

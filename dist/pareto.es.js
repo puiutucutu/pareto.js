@@ -90,6 +90,10 @@ var pipe = function () {
     };
 };
 
+function prop(property, object) {
+    return object[property];
+}
+
 function sort(collection, property) {
     return collection.sort(function (a, b) {
         if (a[property] === b[property])
@@ -105,4 +109,4 @@ function tail(array) {
     return array.slice(1, array.length);
 }
 
-export { chunks as chunk, compose, curry, debounce, deepCopy, flatten, matches, memoize, pipe, sort, tail };
+export { chunks as chunk, compose, curry, debounce, deepCopy, flatten, matches, memoize, pipe, prop, sort, tail };

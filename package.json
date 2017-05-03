@@ -1,6 +1,6 @@
 {
   "name": "paretojs",
-  "version": "3.4.1",
+  "version": "3.5.0",
   "description": "An extremely small, intuitive and fast functional utility library for JavaScript",
   "main": "dist/pareto.cjs.js",
   "jsnext:main": "dist/pareto.es.js",

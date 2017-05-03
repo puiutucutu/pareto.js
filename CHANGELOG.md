@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.5.0
+- Adding prop function
+
 ### 3.4.1
 - Fixing signature of chunk function
 - Fixing signature of flatten function
