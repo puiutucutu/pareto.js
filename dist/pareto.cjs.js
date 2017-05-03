@@ -94,6 +94,10 @@ var pipe = function () {
     };
 };
 
+function prop(property, object) {
+    return object[property];
+}
+
 function sort(collection, property) {
     return collection.sort(function (a, b) {
         if (a[property] === b[property])
@@ -118,5 +122,6 @@ exports.flatten = flatten;
 exports.matches = matches;
 exports.memoize = memoize;
 exports.pipe = pipe;
+exports.prop = prop;
 exports.sort = sort;
 exports.tail = tail;
