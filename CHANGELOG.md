@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.5.1
+- Refactoring rollup build
+- Adding sourcemaps
+
 ### 3.5.0
 - Adding prop function
 
