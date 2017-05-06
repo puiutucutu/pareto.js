@@ -125,3 +125,4 @@ exports.pipe = pipe;
 exports.prop = prop;
 exports.sort = sort;
 exports.tail = tail;
+//# sourceMappingURL=pareto.cjs.js.map

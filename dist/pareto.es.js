@@ -110,3 +110,4 @@ function tail(array) {
 }
 
 export { chunks as chunk, compose, curry, debounce, deepCopy, flatten, matches, memoize, pipe, prop, sort, tail };
+//# sourceMappingURL=pareto.es.js.map
