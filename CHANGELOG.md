@@ -3,6 +3,7 @@
 ### 3.5.1
 - Refactoring rollup build
 - Adding sourcemaps
+- Updating README
 
 ### 3.5.0
 - Adding prop function

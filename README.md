@@ -67,27 +67,20 @@ var debounce = require('paretojs').debounce;
 
 ## API
 
-**tail** : ```tail(array)```
+* [chunk](#chunk)
+* [compose](#compose)
+* [curry](#curry)
+* [debounce](#debounce)
+* [deepCopy](#deepCopy)
+* [flatten](#flatten)
+* [matches](#matches)
+* [memoize](#memoize)
+* [pipe](#pipe)
+* [prop](#prop)
+* [sort](#sort)
+* [tail](#tail)
 
-Gets all, except the first element of an array.
-
-```js
-import { tail } from 'paretojs';
-
-tail([1, 2, 3]); // [2, 3]
-```
-
-**flatten** : ```flatten(array)```
-
-Flattens (recursively) an array
-
-```js
-import { flatten } from 'paretojs';
-
-flatten([1, [2, 3], 4]); // [1, 2, 3, 4]
-```
-
-**chunk** : ```chunk(array, n)```
+### chunk
 
 Returns the chunk of an array based on an integer n
 
@@ -97,22 +90,7 @@ import { chunk } from 'paretojs';
 chunk([1,2,3,4,5,6,7], 3); // [ [1,2,3], [4,5,6], [7] ]
 ```
 
-**curry** : ```curry(args)```
-
-Gets a curried function
-
-```js
-import { curry } from 'paretojs';
-
-const add = (x, y) => x + y;
-
-curry(add, 1, 2); // 3
-curry(add)(1)(2); // 3
-curry(add)(1, 2); // 3
-curry(add, 1)(2); // 3
-```
-
-**compose** : ```compose(f1, f2, ..., fn)```
+### compose
 
 Gets a composed function
 
@@ -127,7 +105,22 @@ const angry = compose(toUpperCase, exclaim);
 angry('stop'); // 'STOP!!!
 ```
 
-**debounce** : ```debounce(fn, time)```
+### curry
+
+Gets a curried function
+
+```js
+import { curry } from 'paretojs';
+
+const add = (x, y) => x + y;
+
+curry(add, 1, 2); // 3
+curry(add)(1)(2); // 3
+curry(add)(1, 2); // 3
+curry(add, 1)(2); // 3
+```
+
+### debounce
 
 Creates and returns a new debounced version of the passed function which will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.
 
@@ -145,22 +138,52 @@ console.log(a); // 1 before 500ms
 console.log(a); // 42 after 500ms
 ```
 
-**pipe** : ```pipe(fns) -> fn```
+### deepCopy
 
-Creates and returns a new function that performs a left-to-right function composition.
+Creates a deep copy of an object
+
 ```js
-import { pipe } from 'paretojs';
+import { deepCopy } from 'paretojs';
 
-const increment = x => x + 1;
-const decrement = x => x - 1;
+const object = {
+  a: 1,
+  b: 2,
+  c: {
+    d: 3,
+  },
+};
 
-const piped = pipe(increment, increment, decrement);
-piped(0); // 1
+deepCopy(object); // { a: 1, b: 2, c: { d: 3} }
 ```
 
-**memoize** : ```memoize(fn)```
+### flatten
+
+Flattens (recursively) an array
+
+```js
+import { flatten } from 'paretojs';
+
+flatten([1, [2, 3], 4]); // [1, 2, 3, 4]
+```
+
+### matches
+
+Checks if an objects matches with some properties
+
+```js
+import { matches } from 'paretojs';
+
+const object1 = { a: 1, b: 2 };
+
+matches(object1, { a: 1 }); // true
+matches(object1, { a: 1, b: 2 }); // true
+matches(object1, { a: 3 }); // false
+```
+
+### memoize
 
 Creates a function that memoizes (caches) the result
+
 ```js
 import { memoize } from 'paretojs';
 
@@ -180,21 +203,35 @@ memoSquare(10); // 100
 count; // 1
 ```
 
-**matches** : ```matches(object, props)```
+### pipe
 
-Checks if an objects matches with some properties
+Creates and returns a new function that performs a left-to-right function composition.
 
 ```js
-import { matches } from 'paretojs';
+import { pipe } from 'paretojs';
 
-const object1 = { a: 1, b: 2 };
+const increment = x => x + 1;
+const decrement = x => x - 1;
 
-matches(object1, { a: 1 }); // true
-matches(object1, { a: 1, b: 2 }); // true
-matches(object1, { a: 3 }); // false
+const piped = pipe(increment, increment, decrement);
+piped(0); // 1
 ```
 
-**sort** : ```sort(collection, property)```
+### prop
+
+Gets the property of an object
+
+```js
+import { prop } from 'paretojs';
+
+const object = {
+  label: 'custom label',
+};
+
+prop('label', object); // custom label
+```
+
+### sort
 
 Sorts a collection based on a property
 
@@ -213,36 +250,14 @@ const collection = [
 sort(collection, 'id'); // [{ id: 1 }, { id: 2 }]
 ```
 
-**deepCopy** : ```deepCopy(object)```
+### tail
 
-Creates a deep copy of an object
-
-```js
-import { deepCopy } from 'paretojs';
-
-const object = {
-  a: 1,
-  b: 2,
-  c: {
-    d: 3,
-  },
-};
-
-deepCopy(object); // { a: 1, b: 2, c: { d: 3} }
-```
-
-**prop** : ```prop(property, object)```
-
-Gets the property of an object
+Gets all, except the first element of an array.
 
 ```js
-import { prop } from 'paretojs';
+import { tail } from 'paretojs';
 
-const object = {
-  label: 'custom label',
-};
-
-prop('label', object); // custom label
+tail([1, 2, 3]); // [2, 3]
 ```
 
 ## Misc
