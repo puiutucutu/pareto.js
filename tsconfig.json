@@ -19,6 +19,7 @@
     "src/extra/deepCopy.ts",
     "src/extra/matches.ts",
     "src/extra/memoize.ts",
+    "src/extra/flatMap.ts",
     "src/extra/flatten.ts",
     "src/extra/pipe.ts",
     "src/extra/prop.ts",
