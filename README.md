@@ -157,7 +157,7 @@ const object = {
 deepCopy(object); // { a: 1, b: 2, c: { d: 3} }
 ```
 
-### flatMaps
+### flatMap
 
 Generates a flattened array by iterating through a collection and applying a function to each element
 
