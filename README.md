@@ -2,7 +2,7 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 13 core functions
+- Only 14 core functions
 - Written in TypeScript
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
@@ -74,6 +74,7 @@ var debounce = require('paretojs').debounce;
 * [deepCopy](#deepcopy)
 * [flatMap](#flatmap)
 * [flatten](#flatten)
+* [get](#get)
 * [matches](#matches)
 * [memoize](#memoize)
 * [pipe](#pipe)
@@ -182,6 +183,20 @@ Flattens (recursively) an array
 import { flatten } from 'paretojs';
 
 flatten([1, [2, 3], 4]); // [1, 2, 3, 4]
+```
+
+### get
+
+Gets the value of an object property based on a string path provided. If the property is not found, the defaultValues is returned
+
+```js
+import { get } from 'paretojs';
+
+get({ a: 1 }, "a")); // 1
+get({ a: 1 }, "b", "default")); // "default"
+get({ a: { b: 2 } }, "a")); // { b: 2 }
+get({ a: { b: 2 } }, "a.b")); // 2
+get({ a: { b: 2 } }, "a.c")); // undefined
 ```
 
 ### matches
