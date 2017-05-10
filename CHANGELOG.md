@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.7.0
+- Adding get function
+
+### 3.6.0
+- Adding flatMap function
+
 ### 3.5.1
 - Refactoring rollup build
 - Adding sourcemaps

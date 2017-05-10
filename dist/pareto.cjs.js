@@ -72,6 +72,21 @@ function flatten(array) {
     return array.reduce(function (a, b) { return a.concat(Array.isArray(b) ? flatten(b) : b); }, []);
 }
 
+function get(object, path, defaultValue) {
+    if (defaultValue === void 0) { defaultValue = undefined; }
+    if (path) {
+        var pathSplitted = path.split(".");
+        var property = pathSplitted[0];
+        var findProperty = object[property];
+        if (findProperty && path.indexOf(".") === -1) {
+            return findProperty;
+        }
+        var newPath = pathSplitted.slice(1, pathSplitted.length).join(".");
+        return get(findProperty, newPath, defaultValue);
+    }
+    return defaultValue;
+}
+
 function matches(obj, props) {
     return Object.keys(props).every(function (key) { return obj[key] === props[key]; });
 }
@@ -124,6 +139,7 @@ exports.debounce = debounce;
 exports.deepCopy = deepCopy;
 exports.flatMap = flatMap;
 exports.flatten = flatten;
+exports.get = get;
 exports.matches = matches;
 exports.memoize = memoize;
 exports.pipe = pipe;
