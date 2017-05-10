@@ -2,7 +2,7 @@
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
-- Only 12 core functions
+- Only 13 core functions
 - Written in TypeScript
 - Encourages immutability
 - Only [pure functions](https://en.wikipedia.org/wiki/Pure_function) (no side-effects)
@@ -72,6 +72,7 @@ var debounce = require('paretojs').debounce;
 * [curry](#curry)
 * [debounce](#debounce)
 * [deepCopy](#deepCopy)
+* [flatMap](#flatMap)
 * [flatten](#flatten)
 * [matches](#matches)
 * [memoize](#memoize)
@@ -154,6 +155,23 @@ const object = {
 };
 
 deepCopy(object); // { a: 1, b: 2, c: { d: 3} }
+```
+
+### flatMaps
+
+Generates a flattened array by iterating through a collection and applying a function to each element
+
+```js
+import { flatMap } from 'paretojs';
+
+const inc = n => n + 1;
+flatMap([1, 2, 3], inc)); // [2, 3, 4]
+
+const dup = n => [n, n];
+flatMap([1, 2, 3], dup)); // [1, 1, 2, 2, 3, 3]
+
+const sq = n => n ** 2;
+flatMap([1, 2, 3], sq)) // [1, 4, 9]
 ```
 
 ### flatten

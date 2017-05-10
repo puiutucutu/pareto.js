@@ -3,6 +3,7 @@ import compose from "./extra/compose";
 import curry from "./extra/curry";
 import debounce from "./extra/debounce";
 import deepCopy from "./extra/deepCopy";
+import flatMap from "./extra/flatMap";
 import flatten from "./extra/flatten";
 import matches from "./extra/matches";
 import memoize from "./extra/memoize";
@@ -17,6 +18,7 @@ export {
   curry,
   debounce,
   deepCopy,
+  flatMap,
   flatten,
   matches,
   memoize,

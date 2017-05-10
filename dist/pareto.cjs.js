@@ -64,6 +64,10 @@ function deepCopy(object) {
     return JSON.parse(JSON.stringify(object));
 }
 
+function flatMap(array, fn) {
+    return array.reduce(function (acc, current) { return acc.concat(fn(current)); }, []);
+}
+
 function flatten(array) {
     return array.reduce(function (a, b) { return a.concat(Array.isArray(b) ? flatten(b) : b); }, []);
 }
@@ -118,6 +122,7 @@ exports.compose = compose;
 exports.curry = curry;
 exports.debounce = debounce;
 exports.deepCopy = deepCopy;
+exports.flatMap = flatMap;
 exports.flatten = flatten;
 exports.matches = matches;
 exports.memoize = memoize;
