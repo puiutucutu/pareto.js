@@ -137,7 +137,9 @@ debounce();
 
 console.log(a); // 1 before 500ms
 
-console.log(a); // 42 after 500ms
+setTimeout(() => {
+  console.log(a); // 42 after 500ms
+}, 600)
 ```
 
 ### deepCopy
