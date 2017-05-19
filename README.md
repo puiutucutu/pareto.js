@@ -1,4 +1,4 @@
-# pareto.js
+# ![pareto.js](http://i.imgur.com/Ucrl2kV.png)
 
 ### An extremely small, intuitive and fast functional utility library for JavaScript
 
