@@ -1,15 +1,20 @@
+// from outside fn declaration 
+const uncurry = f => (a, b) => f (a) (b);
+const reduce = f => aumulator => xs => Array.prototype.reduce.call
+(
+  xs,
+  uncurry(f),
+  accumulator
+)
+const concat = xs => y => Array.prototype.concat.call(xs, y);
+const isArray = x => Array.isArray(x);
 
-const concact xs => y = Array.prototype.concat.call(xs, y);
-const isArray x => => Array.isArray(x);
-const concatenable = x => isArray(x) ? true : false;
-const doWhenConcatenable => f => x => concatenable(x) ? f(x) : x;
-
-function flatten<T>(array: Array<T>): Array<T> {
-  return array.reduce(
-    (a, b) => concat(a)(doWhenConcatenable(flatten)(b))
-    (a, b) => a.concat(Array.isArray(b) ? flatten(b) : b),
-    []
-  );
-}
+// inside fn declaration file
+function flatten<T>(xs: Array<T>): Array<T> {
+  return reduce
+    ((a) => (b) => concat (a) (isArray (b) ? flatten (b) : b))
+    ([])
+    (xs)
+;
 
 export default flatten,
