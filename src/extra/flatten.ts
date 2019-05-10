@@ -1,6 +1,6 @@
 // from outside fn declaration 
 const uncurry = f => (a, b) => f (a) (b);
-const reduce = f => aumulator => xs => Array.prototype.reduce.call
+const reduce = f => accumulator => xs => Array.prototype.reduce.call
 (
   xs,
   uncurry(f),
